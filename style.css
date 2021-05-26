@@ -8,6 +8,7 @@
 /* IMPORTATION POLICE D'ECRITURE                                                        */
 /* =====================================================================================*/
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
 /* =====================================================================================*/
 /* STYLE PAR DEFAUT                                                                     */
@@ -44,7 +45,7 @@
     display:none;
     color:white;
     font-size:15px;
-    
+    font-family: 'Rock Salt', cursive;
   }
   nav{
     width:100;
@@ -102,6 +103,7 @@
     margin-top:149px;
     margin-left:-1px;
     filter: blur(12px);
+    
 }
    .sous_header_texte {
     color: #fff;
@@ -132,8 +134,18 @@
     .navigation_logo_phone{
       display:block;
     }
+    .sous_header{
+      margin-top:75px;
+    }
+    .sous_header_texte{
+      font-size:100%;
+    }
+    .sous_header_texte a{
+      font-size:90%;
+      width:150px;
+    }
    }
-  @media screen and (max-width: 1275px) {
+  @media screen and (max-width: 1300px) {
     .nav_class.responsive {
       position: absolute;
       top:0; right:-20px;
