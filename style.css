@@ -40,6 +40,12 @@
       display:block;
       height:150px;
   }
+  .navigation_logo_phone{
+    display:none;
+    color:white;
+    font-size:15px;
+    
+  }
   nav{
     width:100;
     margin-right:20px;
@@ -119,7 +125,14 @@
        color:white;
        font-weight:bolder;
    }
-
+   @media screen and (max-width: 600px){
+    .navigation_logo{
+      display:none;
+    }
+    .navigation_logo_phone{
+      display:block;
+    }
+   }
   @media screen and (max-width: 1275px) {
     .nav_class.responsive {
       position: absolute;
@@ -149,20 +162,19 @@
 /* CONTACT                                                                              */
 /* =====================================================================================*/
 
-.wrapper{
+.info-magasin-box{
     width: 1170px;
     margin: 5% auto;
 }
-.wrapper h2{
+.info-magasin-box h2{
     text-transform: uppercase;
-    font-family: poppins;
     font-weight: bold;
     text-align: center;
     font-size: 60px;
     color: black;
     margin: 0;
 }
-.single-service {
+.box-service {
 position: relative;
 width: 31%;
 height: 320px;
@@ -175,44 +187,43 @@ float: left;
 margin: 0 10px;
 text-align: center;
 }
-.line {
+.separateur {
 width: 150px;
 height: 3px;
-background: #fff;
+background: black;
 margin: 0 auto 60px auto;
 }
-.single-service p{            
+.box-service p{            
     color: #262626;
     font-size: 14px;
 }
-.single-service h3 {
+.box-service h3 {
     font-size: 25px;
     text-transform: uppercase;
-    font-family: poppins;
     letter-spacing: 1px;
     color: #262626;
 }
-.social {
+.box-logo {
 width: 60px;
 height: 60px;
 background: #262626;
 border-radius: 50%;
 margin: 5% auto;
 }
-.social i {
+.box-logo i {
 font-size: 30px;
 padding: 15px;
     color: #fff;
 }
 @media (max-width:1000px){
-    .wrapper {
+    .info-magasin-box {
 width: 100%;
 }
-.single-service {
+.box-service {
 width: 95%;
 margin-bottom: 30px;
 }
-.wrapper h2 {
+.info-magasin-box h2 {
 font-size: 30px;
 }
 }
