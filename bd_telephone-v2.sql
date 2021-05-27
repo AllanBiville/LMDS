@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `marque`;
 CREATE TABLE IF NOT EXISTS `marque` (
-  `id_marque` int(11) NOT NULL AUTO_INCREMENT,
+  `id_marque` int(5) NOT NULL AUTO_INCREMENT,
   `nom_marque` varchar(20) NOT NULL,
   PRIMARY KEY (`id_marque`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
@@ -51,7 +51,7 @@ INSERT INTO `marque` (`id_marque`, `nom_marque`) VALUES
 
 DROP TABLE IF EXISTS `modele`;
 CREATE TABLE IF NOT EXISTS `modele` (
-  `id_modele` int(11) NOT NULL AUTO_INCREMENT,
+  `id_modele` int(5) NOT NULL AUTO_INCREMENT,
   `nom_modele` varchar(20) NOT NULL,
   `id_marque` int(11) NOT NULL,
   PRIMARY KEY (`id_modele`),
@@ -75,10 +75,10 @@ INSERT INTO `modele` (`id_modele`, `nom_modele`, `id_marque`) VALUES
 
 DROP TABLE IF EXISTS `probleme`;
 CREATE TABLE IF NOT EXISTS `probleme` (
-  `id_probleme` int(3) NOT NULL AUTO_INCREMENT,
+  `id_probleme` int(5) NOT NULL AUTO_INCREMENT,
   `nom_probleme` varchar(30) NOT NULL,
   PRIMARY KEY (`id_probleme`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `probleme`
