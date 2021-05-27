@@ -1,34 +1,7 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/36d8ba31b1.js" crossorigin="anonymous"></script>
-    <script src="javascript/hamburger.js"></script>
-</head>
-<body>
-    <div class="conteneur_header">
-        <header>
-          <div class="navigation">
-            <a href="index.html"><img class="navigation_logo" src="images/banniere.jpg"/></a>
-            <a href="index.html"><h1 class="navigation_logo_phone">La Maison Du Smartphone</h1></a>
-              <span>
-                <nav id="nav_id" class="nav_class">
-                  <a class="navigation_lien" href="index.html">Accueil</a>
-                  <a class="navigation_lien" href="devis.html">Devis</a>
-                  <a class="navigation_lien" href="produits.html">Produits</a>
-                  <a class="navigation_lien" href="horaires.html">Horaires</a>
-                  <a class="navigation_lien" href="contact.html">Contact</a>
-                  <a href="javascript:void(0);" class="icon" onclick="OpenWhenClick()"><i class="fa fa-bars"></i></a>
-              </nav>
-            </span>
-        </div>
-      </header>
-    </div>
-    <div class="conteneur_sous_header">
+<?php
+include("php/header.php");
+?>
+<div class="conteneur_sous_header">
         <img class="sous_header"></img>
         <div class="sous_header_texte">
             <h1>Réparations téléphonie, tablettes<br/> et vente d'accessoires</h1>
@@ -67,5 +40,6 @@
       </div>
       </div>
 </main>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 </body>
 </html>

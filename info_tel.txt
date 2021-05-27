@@ -1,0 +1,39 @@
+
+    <h1>Informations Téléphone</h1>
+
+
+<?php 
+echo "<label for='marque'>Marque</label><br/>";
+echo "<select name='marque'>";
+include("connexion_bd_telephone.php");
+$Requete = "select * from marque" ;
+$Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
+while (  $ligne = mysqli_fetch_array($Resultat)  )
+{
+  echo "<option value='".$ligne['id_marque']. "'>";
+  echo $ligne['nom_marque'] ;
+  echo "</option>\n" ;
+}
+echo "</select><br/><br/>" ;
+mysqli_free_result ( $Resultat ) ;
+mysqli_close ( $DataBase ) ;  
+?>
+  
+
+<?php 
+  echo"<label for='modele'>Modele</label><br/>";
+  echo"<select name='modele'>";
+include("connexion_bd_telephone.php");
+$Requete = "select * from modele" ;
+$Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
+while (  $ligne = mysqli_fetch_array($Resultat)  )
+{
+  echo "<option value='".$ligne['id_modele']."'>";
+  echo $ligne['nom_modele'] ;
+  echo "</option>\n" ;
+}
+echo "</select><br/><br/>" ;
+mysqli_free_result ( $Resultat ) ;
+mysqli_close ( $DataBase ) ;  
+
+?>
