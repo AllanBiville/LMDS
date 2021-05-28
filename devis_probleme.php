@@ -30,10 +30,53 @@ while (  $ligne = mysqli_fetch_array($Resultat)  )
   echo $ligne['nom_probleme'] ;
   echo "</option>\n" ;
 }
-echo "</select><br/><br/>" ;
+echo "</select>" ;
 mysqli_free_result ( $Resultat ) ;
 mysqli_close ( $DataBase ) ;  
 ?>
+  <div id="d2">
+  <?php 
+echo "<select name='probleme'>";
+include("php/connexion_bd_telephone.php");
+$Requete = "select * from probleme" ;
+$Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
+while (  $ligne = mysqli_fetch_array($Resultat)  )
+{
+  echo "<option value='".$ligne['id_probleme']. "'>";
+  echo $ligne['nom_probleme'] ;
+  echo "</option>\n" ;
+}
+echo "</select>" ;
+
+mysqli_free_result ( $Resultat ) ;
+mysqli_close ( $DataBase ) ;  
+?>
+    </div>
+
+
+<style>
+  #d2{
+    display:none;
+  }
+  </style>
+<a id="togg2">Ajouter un autre problème</a>
+
+<script>
+    function togg(){
+  if(getComputedStyle(d2).display == "none"){
+    d2.style.display = "block";
+    togg2.style.display = "none";
+  } 
+};
+togg2.onclick = togg;
+</script>
+
+
+
+
+
+
+
     </fieldset>
     <input type="submit" value="Etape suivante" />
     </form>

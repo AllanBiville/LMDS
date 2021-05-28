@@ -23,10 +23,10 @@ $modele = $_SESSION['modele'];
     echo "<legend><span class='number'>5</span>Confirmation de votre devis</legend>"; 
     echo "<br/><hr><br/>";
     echo "<legend><i class='fas fa-chevron-right'></i>Informations clients</legend>";
-    echo "<input type='text' readOnly='readOnly' name='nom' placeholder='Votre nom *' value=".$_SESSION['nom'].">";
-    echo "<input type='text' readOnly='readOnly' name='prenom' placeholder='Votre prénom *'value=".$_SESSION['prenom'].">";
-    echo "<input type='email' readOnly='readOnly' name='email' placeholder='Votre email *'value=".$_SESSION['email'].">";
-    echo "<input type='text' readOnly='readOnly' name='telephone' placeholder='Votre téléphone *'value=".$_SESSION['telephone'].">";
+    echo "<input type='text' readOnly='readOnly' name='nom' placeholder='Votre nom *' value='".$_SESSION['nom']."'>";
+    echo "<input type='text' readOnly='readOnly' name='prenom' placeholder='Votre prénom *' value='".$_SESSION['prenom']."'>";
+    echo "<input type='email' readOnly='readOnly' name='email' placeholder='Votre email *' value='".$_SESSION['email']."'>";
+    echo "<input type='text' readOnly='readOnly' name='telephone' placeholder='Votre téléphone *' value='".$_SESSION['telephone']."'>";
     echo "<legend><i class='fas fa-chevron-right'></i>Informations téléphones</legend>";
 
     include("php/connexion_bd_telephone.php");
@@ -35,7 +35,7 @@ $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase
 while (  $ligne = mysqli_fetch_array($Resultat)  )
 {
     if ($ligne['id_marque'] == $_SESSION['marque']){
-        echo "<input type='text' readOnly='readOnly' name='marque' placeholder='Marque *'value=".$ligne['nom_marque'].">";
+        echo "<input type='text' readOnly='readOnly' name='marque' placeholder='Marque *' value='".$ligne['nom_marque']."'>";
       }
 }
 mysqli_free_result ( $Resultat ) ;
@@ -48,8 +48,7 @@ $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase
 while (  $ligne = mysqli_fetch_array($Resultat)  )
 {
     if ($ligne['id_modele'] == $_SESSION['modele']){
-        echo "<input type='text' readOnly='readOnly' name='modele' placeholder='Modele *'value=".$ligne['nom_modele'].">";
-        echo $ligne['nom_modele'];
+        echo "<input type='text' readOnly='readOnly' name='modele' placeholder='Modele *' value='".$ligne['nom_modele']."'>";
       }
 }
 mysqli_free_result ( $Resultat ) ;

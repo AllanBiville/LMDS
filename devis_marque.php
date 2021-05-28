@@ -22,10 +22,11 @@ $_SESSION['telephone'] = $telephone;
 </div>
 <br/><br/><br/><br/><br/><br/>
 
-    <form class="form-devis" method="POST" action="devis_modele.php">
-    <fieldset>
-    <legend><span class="number">2</span>Quel est la marque de votre téléphone ?</legend>    
+
 <?php 
+echo "<form class='form-devis' method='POST' action='devis_modele.php'>";
+echo "<fieldset>";
+echo "<legend><span class='number'>2</span>Quel est la marque de votre téléphone ?</legend>    ";
 echo "<select name='marque'>";
 echo "<option value='0'>";
 echo "=== Choisir une marque ===" ;
@@ -42,11 +43,10 @@ while (  $ligne = mysqli_fetch_array($Resultat)  )
 echo "</select><br/><br/>" ;
 mysqli_free_result ( $Resultat ) ;
 mysqli_close ( $DataBase ) ;  
+echo "</fieldset>";
+echo "<input type='submit' value='Etape suivante' />";
+echo "</form>";
 ?>
-    </fieldset>
-    <input type="submit" value="Etape suivante" />
-    </form>
-    <br/><br/>
 </main>
 <?php
 include("php/footer.php");
