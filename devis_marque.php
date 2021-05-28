@@ -48,6 +48,9 @@ mysqli_close ( $DataBase ) ;
     </form>
     <br/><br/>
 </main>
+<?php
+include("php/footer.php");
+?>
 </body>
 </html>
 

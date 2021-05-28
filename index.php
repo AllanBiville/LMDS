@@ -41,5 +41,8 @@ include("php/header.php");
       </div>
 </main>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<?php
+include("php/footer.php");
+?>
 </body>
 </html>

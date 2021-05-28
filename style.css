@@ -162,7 +162,7 @@
     .nav_class.responsive {
       position: absolute;
       top:0; right:-20px;
-      background-color:black;
+      background-color:rgb(33, 48, 53);
       width:100%;
     }
     .nav_class.responsive a.icon {
@@ -310,6 +310,11 @@ font-size: 30px;
 	text-align: center;
 	border-radius: 15px 15px 15px 0px;
 }
+.form-devis .fa-chevron-right {
+	font-size: 22px;
+    color:rgb(33, 48, 53);
+    margin-right:15px;
+  }
 .form-devis select{
 	-webkit-appearance: menulist-button;
 	height:50px;
@@ -356,6 +361,7 @@ font-size: 30px;
 }
 .progressbar {
   counter-reset: step;
+  margin-top:-30px;
 }
 .progressbar li {
   list-style-type: none;

@@ -26,6 +26,9 @@ session_start();
     </form>
     <br/><br/>
 </main>
+<?php
+include("php/footer.php");
+?>
 </body>
 </html>
 

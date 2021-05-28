@@ -9,13 +9,14 @@
     <script src="https://kit.fontawesome.com/36d8ba31b1.js" crossorigin="anonymous"></script>
     <script src="javascript/hamburger.js"></script>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon"/>
 </head>
 <body>
     <div class="conteneur_header">
         <header>
           <div class="navigation">
-            <a href="index.html"><img class="navigation_logo" src="images/banniere.jpg"/></a>
-            <a href="index.html"><h1 class="navigation_logo_phone">La Maison Du Smartphone</h1></a>
+            <a href="index.php"><img class="navigation_logo" src="images/banniere.jpg"/></a>
+            <a href="index.php"><h1 class="navigation_logo_phone">La Maison Du Smartphone</h1></a>
               <span>
                 <nav id="nav_id" class="nav_class">
                   <a class="navigation_lien" href="index.php">Accueil</a>

@@ -16,7 +16,7 @@ $_SESSION['modele'] = $marque;
 </div>
 <br/><br/><br/><br/><br/><br/>
 
-    <form class="form-devis" method="POST" action="">
+    <form class="form-devis" method="POST" action="devis_confirmation.php">
     <fieldset>
     <legend><span class="number">4</span>Quel est votre problème ?</legend>    
 <?php 
@@ -39,6 +39,9 @@ mysqli_close ( $DataBase ) ;
     </form>
     <br/><br/>
 </main>
+<?php
+include("php/footer.php");
+?>
 </body>
 </html>
 
