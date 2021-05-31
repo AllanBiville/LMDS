@@ -15,13 +15,12 @@ $_SESSION['marque'] = $marque;
   </ul>
 </div>
 <br/><br/><br/><br/><br/><br/>
-
-    <form class="form-devis" method="POST" action="devis_probleme.php">
-    <fieldset>
-    <legend><span class="number">3</span>Quel est le modèle de votre téléphone ?</legend>    
 <?php 
-echo "<select name='modele'>";
-echo "<option value='0'>";
+echo "<form class='form-devis' method='POST' action='devis_probleme.php'>";
+echo "<fieldset>";
+echo "<legend><span class='number'>3</span>Quel est le modèle de votre téléphone ?</legend>";
+echo "<select required name='modele'>";
+echo "<option disabled selected hidden value=''>";
 echo "=== Choisir un modèle ===" ;
 echo "</option>\n" ;
 include("php/connexion_bd_telephone.php");

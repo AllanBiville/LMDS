@@ -5,6 +5,14 @@ $probleme = $_POST['probleme'];
 $_SESSION['probleme'] = $probleme;
 $marque = $_SESSION['marque'];
 $modele = $_SESSION['modele'];
+if(isset($_POST['probleme2'])){
+    $probleme2 = $_POST['probleme2'];
+$_SESSION['probleme2'] = $probleme2;
+}
+if(isset($_POST['probleme3'])){
+    $probleme3 = $_POST['probleme3'];
+$_SESSION['probleme3'] = $probleme3;
+}
 ?>
 <main>
 <div class="container_progress_bar">
@@ -27,39 +35,82 @@ $modele = $_SESSION['modele'];
     echo "<input type='text' readOnly='readOnly' name='prenom' placeholder='Votre prénom *' value='".$_SESSION['prenom']."'>";
     echo "<input type='email' readOnly='readOnly' name='email' placeholder='Votre email *' value='".$_SESSION['email']."'>";
     echo "<input type='text' readOnly='readOnly' name='telephone' placeholder='Votre téléphone *' value='".$_SESSION['telephone']."'>";
-    echo "<legend><i class='fas fa-chevron-right'></i>Informations téléphones</legend>";
 
+    echo "<legend><i class='fas fa-chevron-right'></i>Informations téléphones</legend>";
     include("php/connexion_bd_telephone.php");
-$Requete = "select * from marque where id_marque = '$marque';" ;
-$Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
-while (  $ligne = mysqli_fetch_array($Resultat)  )
-{
-    if ($ligne['id_marque'] == $_SESSION['marque']){
-        echo "<input type='text' readOnly='readOnly' name='marque' placeholder='Marque *' value='".$ligne['nom_marque']."'>";
-      }
-}
-mysqli_free_result ( $Resultat ) ;
-mysqli_close ( $DataBase ) ;  
+    $Requete = "select * from marque where id_marque = '$marque';" ;
+    $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
+    while (  $ligne = mysqli_fetch_array($Resultat)  )
+    {
+        if ($ligne['id_marque'] == $_SESSION['marque']){
+            echo "<input type='text' readOnly='readOnly' name='marque' placeholder='Marque *' value='".$ligne['nom_marque']."'>";
+        }
+    }
+    mysqli_free_result ( $Resultat ) ;
+    mysqli_close ( $DataBase ) ;  
 
     
-include("php/connexion_bd_telephone.php");
-$Requete = "select * from modele where modele.id_modele = '$modele';" ;
-$Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
-while (  $ligne = mysqli_fetch_array($Resultat)  )
-{
-    if ($ligne['id_modele'] == $_SESSION['modele']){
-        echo "<input type='text' readOnly='readOnly' name='modele' placeholder='Modele *' value='".$ligne['nom_modele']."'>";
-      }
+    include("php/connexion_bd_telephone.php");
+    $Requete = "select * from modele where modele.id_modele = '$modele';" ;
+    $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
+    while (  $ligne = mysqli_fetch_array($Resultat)  )
+    {
+        if ($ligne['id_modele'] == $_SESSION['modele']){
+            echo "<input type='text' readOnly='readOnly' name='modele' placeholder='Modele *' value='".$ligne['nom_modele']."'>";
+        }
+    }
+    mysqli_free_result ( $Resultat ) ;
+    mysqli_close ( $DataBase ) ;  
+
+
+    echo "<legend><i class='fas fa-chevron-right'></i>Problèmes téléphone</legend>";
+    include("php/connexion_bd_telephone.php");
+    $Requete = "select * from probleme where id_probleme = $probleme" ;
+    $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
+    while (  $ligne = mysqli_fetch_array($Resultat)  )
+    {
+        if ($ligne['id_probleme'] == $_SESSION['probleme']){
+            echo "<input type='text' readOnly='readOnly' name='probleme' placeholder='Problème 1 *' value='".$ligne['nom_probleme']."'>";
+        }       
+    }
+   
+    if (isset($probleme2)){
+    include("php/connexion_bd_telephone.php");
+    $Requete = "select * from probleme where id_probleme = $probleme2" ;
+    $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
+    while (  $ligne = mysqli_fetch_array($Resultat)  )
+    {
+        if ($ligne['id_probleme'] == $_SESSION['probleme2']){
+            echo "<input type='text' readOnly='readOnly' name='probleme2' placeholder='Problème 2 *' value='".$ligne['nom_probleme']."'>";
+        }    
+    }
 }
-mysqli_free_result ( $Resultat ) ;
-mysqli_close ( $DataBase ) ;  
+if (isset($probleme3)){
+    include("php/connexion_bd_telephone.php");
+    $Requete = "select * from probleme where id_probleme = $probleme3" ;
+    $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
+    while (  $ligne = mysqli_fetch_array($Resultat)  )
+    {
+        if ($ligne['id_probleme'] == $_SESSION['probleme3']){
+            echo "<input type='text' readOnly='readOnly' name='probleme3' placeholder='Problème 3 *' value='".$ligne['nom_probleme']."'>";
+            echo $_SESSION['probleme3'];
+        } 
+    }
+}
+    mysqli_free_result ( $Resultat ) ;
+    mysqli_close ( $DataBase ) ;  
 
-    echo "</fieldset>";
 
-    echo "<input type='submit' value='Envoyer le devis' />";
-    echo "</form>";
-    echo "<br/><br/>";
+
+ 
+   
+   
     ?>
+    </fieldset>
+    <input type='submit' value="Envoyer le devis" />
+    </form>
+    <br/><br/>
+    
 </main>
 <?php
 include("php/footer.php");

@@ -20,7 +20,10 @@ $_SESSION['modele'] = $marque;
     <fieldset>
     <legend><span class="number">4</span>Quel est votre problème ?</legend>    
 <?php 
-echo "<select name='probleme'>";
+echo "<select required name='probleme'>";
+echo "<option disabled selected hidden value=''>";
+echo "=== Choisir un problème ===" ;
+echo "</option>\n" ;
 include("php/connexion_bd_telephone.php");
 $Requete = "select * from probleme" ;
 $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
@@ -34,9 +37,35 @@ echo "</select>" ;
 mysqli_free_result ( $Resultat ) ;
 mysqli_close ( $DataBase ) ;  
 ?>
-  <div id="d2">
+
+
+  <div id="probleme2">
   <?php 
-echo "<select name='probleme'>";
+echo "<select name='probleme2'>";
+echo "<option disabled selected hidden value=''>";
+echo "=== Choisir un problème ===" ;
+echo "</option>\n" ;
+include("php/connexion_bd_telephone.php");
+$Requete = "select * from probleme" ;
+$Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
+while (  $ligne = mysqli_fetch_array($Resultat)  )
+{
+  echo "<option value='".$ligne['id_probleme']. "'>";
+  echo $ligne['nom_probleme'] ;
+  echo "</option>\n" ;
+}
+echo "</select>" ;
+
+mysqli_free_result ( $Resultat ) ;
+mysqli_close ( $DataBase ) ;  
+?>
+    </div>
+    <div id="probleme3">
+  <?php 
+echo "<select name='probleme3'>";
+echo "<option disabled selected hidden value=''>";
+echo "=== Choisir un problème ===" ;
+echo "</option>\n" ;
 include("php/connexion_bd_telephone.php");
 $Requete = "select * from probleme" ;
 $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
@@ -54,24 +83,13 @@ mysqli_close ( $DataBase ) ;
     </div>
 
 
-<style>
-  #d2{
-    display:none;
-  }
-  </style>
-<a id="togg2">Ajouter un autre problème</a>
-
-<script>
-    function togg(){
-  if(getComputedStyle(d2).display == "none"){
-    d2.style.display = "block";
-    togg2.style.display = "none";
-  } 
-};
-togg2.onclick = togg;
-</script>
+<a class="devis_bouton_add" id="add2"><i class="fas fa-plus"></i> Ajouter un problème</a>
+<a class="devis_bouton_add" id="add3"><i class="fas fa-plus"></i> Ajouter un problème</a>
+<a class="devis_bouton_remove" id="remove2"><i class="fas fa-minus"></i> Retirer un problème</a>
+<a class="devis_bouton_remove" id="remove3"><i class="fas fa-minus"></i> Retirer un problème</a>
 
 
+<script src="javascript/add_remove_content.js"></script>
 
 
 
