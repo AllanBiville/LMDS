@@ -46,6 +46,9 @@ $_SESSION['probleme3'] = $probleme3;
             echo "<input type='text' readOnly='readOnly' name='marque' placeholder='Marque *' value='".$ligne['nom_marque']."'>";
         }
     }
+    if (isset($_SESSION['marque2'])){
+        echo "<input type='text' readOnly='readOnly' name='marque2' placeholder='Marque *' value='".$_SESSION['marque2']."'>";
+    }
     mysqli_free_result ( $Resultat ) ;
     mysqli_close ( $DataBase ) ;  
 
@@ -58,6 +61,9 @@ $_SESSION['probleme3'] = $probleme3;
         if ($ligne['id_modele'] == $_SESSION['modele']){
             echo "<input type='text' readOnly='readOnly' name='modele' placeholder='Modele *' value='".$ligne['nom_modele']."'>";
         }
+    }
+    if (isset($_SESSION['modele2'])){
+        echo "<input type='text' readOnly='readOnly' name='modele2' placeholder='Modèle *' value='".$_SESSION['modele2']."'>";
     }
     mysqli_free_result ( $Resultat ) ;
     mysqli_close ( $DataBase ) ;  

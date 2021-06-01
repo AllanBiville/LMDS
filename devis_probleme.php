@@ -1,8 +1,16 @@
 <?php
 include("php/header.php");
 session_start();
-$marque = $_POST['modele'];
-$_SESSION['modele'] = $marque;
+if (isset($_POST['modele'])){
+  $modele = $_POST['modele'];
+  $_SESSION['modele'] = $modele;
+}
+if (isset($_POST['modele2'])){
+  $modele2 = $_POST['modele2'];
+  $_SESSION['modele2'] = $modele2;
+  $_SESSION['modele'] = NULL;
+}
+
 ?>
 <main>
 <div class="container_progress_bar">

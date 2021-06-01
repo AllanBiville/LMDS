@@ -435,6 +435,7 @@ font-size: 30px;
   padding:10px;
   margin-bottom:10px;
   cursor:pointer;
+  text-decoration:none;
 }
 .devis_bouton_remove{
   background-color:#c73d3d;
@@ -446,6 +447,54 @@ font-size: 30px;
   padding:10px;
   margin-bottom:10px;
   cursor:pointer;
+  text-decoration:none;
+}
+.devis_bouton_marque_modele_autre{
+  background-color:rgb(214, 158, 4);
+  color:white;
+  font-weight:bolder;
+  display:block;
+  text-align:center;
+  width:100%;
+  padding:10px;
+  margin-bottom:10px;
+  cursor:pointer;
+  text-decoration:none;
+}
+.savoir-marque-modele{
+  color:rgb(42, 144, 207);
+  border: 2px dashed rgb(42, 144, 207);
+  padding:5px;
+}
+.savoir-marque-modele-contenu{
+  text-align:center;
+}
+.savoir-marque-modele-contenu h1{
+  margin-bottom:80px;
+}
+.savoir-marque-modele-contenu h2{
+  
+}
+.savoir-marque-modele-contenu p{
+  
+}
+.galerie {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 1300px;
+  margin: 70px auto 0;
+}
+.item {
+  width: 300px;
+  margin: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.item img {
+  width: 100%;
+  height: auto;
 }
 
 
