@@ -27,8 +27,7 @@ echo "</form>";
 <?php
 include("php/footer.php");
 ?>
-</body>
-</html>
+
 
 
 

@@ -27,16 +27,7 @@ session_start();
     <form class="form-session_destroy" method="POST" action="php/session_destroy.php">
     <input type="submit" value="En cas de bug"/>
     </form>
-    
-
-</script>
-</body>
-</html>
-    
-    <br/><br/>
 </main>
 <?php
 include("php/footer.php");
 ?>
-</body>
-</html>

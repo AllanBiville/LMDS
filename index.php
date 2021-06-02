@@ -11,38 +11,63 @@ include("php/header.php");
     
 <main>
     <br/><br/><br/>
-    <div class="info-magasin-box">
-        <h2>Notre boutique...</h2>
-      <div class="separateur"></div>
-
-      <div class="box-service">
-            <div class="box-logo"><i class="fas fa-leaf"></i></div>
-             <h3>est écologique</h3>
-             <br/>
-             <p>- Nous essayons au maximum de préserver la planête, nous avons décider de mettre des posters, plutôt que des affiches, nous ne faisons pas de prospectus.<br/>
-                - Nous avons également pris la décision de ne pas vendre de téléphone neuf, mais plutôt de vous motiver à réparer votre téléphone actuel.<br/>
-                - Notre magasin est constitué en majeur partie de bois, un matériau naturel et durable.
-            </p>
+    <h1 class="titre_service_box">Notre Boutique</h1><br/><br/>
+  <div class="global_service_box">
+    <div class="service_box_colonne">
+      <div class="service-box">
+        <div class="service-box-icon">
+        <i class="fas fa-question"></i>
+        </div>
+        <div class="service-box-titre">
+          <h2>Info 1</h2>
+        </div>
+        <div class="service-box-contenu">
+        Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla
+        </div>
       </div>
-
-      <div class="box-service">
-            <div class="box-logo"><i class="fa fa-cogs"></i></div>
-             <h3>...</h3>
-             <br/>
-             <p>...</p>
-     </div>
-      
-      <div class="box-service">
-            <div class="box-logo"><i class="fa fa-diamond"></i></div>
-             <h3>...</h3>
-             <br/>
-             <p>...</p>
+    </div>
+    <div class="service_box_colonne">
+      <div class="service-box">
+        <div class="service-box-icon">
+        <i class="fas fa-question"></i>
+        </div>
+        <div class="service-box-titre">
+          <h2>Info 2</h2>
+        </div>
+        <div class="service-box-contenu">
+        Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla
+        </div>
       </div>
+    </div>
+    <div class="service_box_colonne">
+      <div class="service-box">
+        <div class="service-box-icon">
+        <i class="fas fa-question"></i>
+        </div>
+        <div class="service-box-titre">
+          <h2>Info 3</h2>
+        </div>
+        <div class="service-box-contenu">
+        Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla
+        </div>
       </div>
+    </div>
+    <div class="service_box_colonne">
+      <div class="service-box">
+        <div class="service-box-icon">
+        <i class="fas fa-question"></i>
+        </div>
+        <div class="service-box-titre">
+          <h2>Info 4</h2>
+        </div>
+        <div class="service-box-contenu">
+        Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla Bla bla bla  bla
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </main>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <?php
 include("php/footer.php");
 ?>
-</body>
-</html>

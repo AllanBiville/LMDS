@@ -121,6 +121,5 @@ if (isset($probleme3)){
 <?php
 include("php/footer.php");
 ?>
-</body>
-</html>
+
 

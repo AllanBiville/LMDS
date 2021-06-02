@@ -21,9 +21,8 @@
                 <nav id="nav_id" class="nav_class">
                   <a class="navigation_lien" href="index.php">Accueil</a>
                   <a class="navigation_lien" href="devis.php">Devis</a>
-                  <a class="navigation_lien" href="produits.html">Produits</a>
-                  <a class="navigation_lien" href="horaires.html">Horaires</a>
-                  <a class="navigation_lien" href="contact.html">Contact</a>
+                  <a class="navigation_lien" href="produits.php">Produits</a>
+                  <a class="navigation_lien" href="contact.php">Contact</a>
                   <a href="javascript:void(0);" class="icon" onclick="OpenWhenClick()"><i class="fa fa-bars"></i></a>
               </nav>
             </span>

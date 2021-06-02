@@ -49,8 +49,6 @@ mysqli_close ( $DataBase ) ;
 <?php
 include("php/footer.php");
 ?>
-</body>
-</html>
 
 
 

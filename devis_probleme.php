@@ -80,7 +80,7 @@ $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase
 while (  $ligne = mysqli_fetch_array($Resultat)  )
 {
   echo "<option value='".$ligne['id_probleme']. "'>";
-  echo $ligne['nom_probleme'] ;
+  echo $ligne['nom_probleme'];
   echo "</option>\n" ;
 }
 echo "</select>" ;
@@ -111,8 +111,5 @@ mysqli_close ( $DataBase ) ;
 <?php
 include("php/footer.php");
 ?>
-</body>
-</html>
-
 
 
