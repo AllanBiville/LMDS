@@ -23,7 +23,7 @@
                   <a class="navigation_lien" href="devis.php">Devis</a>
                   <a class="navigation_lien" href="produits.php">Produits</a>
                   <a class="navigation_lien" href="contact.php">Contact</a>
-                  <a href="javascript:void(0);" class="icon" onclick="OpenWhenClick()"><i class="fa fa-bars"></i></a>
+                  <a href="javascript:void(0);" class="icon" onclick="OpenWhenClick()"><i id="logo_change" class="fa fa-bars"></i></a>
               </nav>
             </span>
         </div>

@@ -157,6 +157,12 @@
     .conteneur_header{
       height:50px;
     }
+    .nav_class.responsive a.icon {
+      position: absolute;
+      right: 0;
+      margin-top: -54px;
+      display:block;
+    }
    }
   @media screen and (max-width: 1130px) {
     .nav_class.responsive {
@@ -168,7 +174,7 @@
     .nav_class.responsive a.icon {
       position: absolute;
       right: 0;
-      top: 0;
+      top: 39.5px;
       display:block;
     }
     .nav_class.responsive a {
@@ -377,6 +383,21 @@
   text-align: center;
   text-transform: uppercase;
   color: rgb(33, 48, 53);
+}
+@media screen and (max-width: 460px){
+  .progressbar li{
+    font-size:9.9px;
+  }
+}
+@media screen and (max-width: 370px){
+  .progressbar li{
+    font-size:8px;
+  }
+}
+@media screen and (max-width: 300px){
+  .progressbar li{
+    font-size:7px;
+  }
 }
 .progressbar li:before {
   width: 30px;
