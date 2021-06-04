@@ -4,6 +4,7 @@ session_start();
 if (isset($_POST['modele'])){
   $modele = $_POST['modele'];
   $_SESSION['modele'] = $modele;
+  $_SESSION['modele2'] = NULL;
 }
 if (isset($_POST['modele2'])){
   $modele2 = $_POST['modele2'];

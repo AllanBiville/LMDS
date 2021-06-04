@@ -26,7 +26,7 @@ $_SESSION['probleme3'] = $probleme3;
 </div>
 <br/><br/><br/><br/><br/><br/>
 <?php
-    echo "<form class='form-devis' method='POST' action=''>";
+    echo "<form class='form-devis' method='POST' action='devis_confirmation_final.php'>";
     echo "<fieldset>";
     echo "<legend><span class='number'>5</span>Confirmation de votre devis</legend>"; 
     echo "<br/><hr><br/>";
@@ -43,11 +43,13 @@ $_SESSION['probleme3'] = $probleme3;
     while (  $ligne = mysqli_fetch_array($Resultat)  )
     {
         if ($ligne['id_marque'] == $_SESSION['marque']){
+            $_SESSION['marque'] = $ligne['nom_marque'];
             echo "<input type='text' readOnly='readOnly' name='marque' placeholder='Marque *' value='".$ligne['nom_marque']."'>";
         }
     }
     if (isset($_SESSION['marque2'])){
-        echo "<input type='text' readOnly='readOnly' name='marque2' placeholder='Marque *' value='".$_SESSION['marque2']."'>";
+        echo "<input type='text' readOnly='readOnly' name='marque' placeholder='Marque *' value='".$_SESSION['marque2']."'>";
+        $_SESSION['marque'] = $_SESSION['marque2'];
     }
     mysqli_free_result ( $Resultat ) ;
     mysqli_close ( $DataBase ) ;  
@@ -60,10 +62,12 @@ $_SESSION['probleme3'] = $probleme3;
     {
         if ($ligne['id_modele'] == $_SESSION['modele']){
             echo "<input type='text' readOnly='readOnly' name='modele' placeholder='Modele *' value='".$ligne['nom_modele']."'>";
+            $_SESSION['modele'] = $ligne['nom_modele'];
         }
     }
     if (isset($_SESSION['modele2'])){
-        echo "<input type='text' readOnly='readOnly' name='modele2' placeholder='Modèle *' value='".$_SESSION['modele2']."'>";
+        echo "<input type='text' readOnly='readOnly' name='modele' placeholder='Modèle *' value='".$_SESSION['modele2']."'>";
+        $_SESSION['modele'] = $_SESSION['modele2'];
     }
     mysqli_free_result ( $Resultat ) ;
     mysqli_close ( $DataBase ) ;  
@@ -77,6 +81,7 @@ $_SESSION['probleme3'] = $probleme3;
     {
         if ($ligne['id_probleme'] == $_SESSION['probleme']){
             echo "<input type='text' readOnly='readOnly' name='probleme' placeholder='Problème 1 *' value='".$ligne['nom_probleme']."'>";
+            $_SESSION['probleme'] = $ligne['nom_probleme'];
         }       
     }
    
@@ -88,6 +93,7 @@ $_SESSION['probleme3'] = $probleme3;
     {
         if ($ligne['id_probleme'] == $_SESSION['probleme2']){
             echo "<input type='text' readOnly='readOnly' name='probleme2' placeholder='Problème 2 *' value='".$ligne['nom_probleme']."'>";
+            $_SESSION['probleme2'] = $ligne['nom_probleme'];
         }    
     }
 }
@@ -99,7 +105,7 @@ if (isset($probleme3)){
     {
         if ($ligne['id_probleme'] == $_SESSION['probleme3']){
             echo "<input type='text' readOnly='readOnly' name='probleme3' placeholder='Problème 3 *' value='".$ligne['nom_probleme']."'>";
-            echo $_SESSION['probleme3'];
+            $_SESSION['probleme3'] = $ligne['nom_probleme'];
         } 
     }
 }
@@ -113,7 +119,7 @@ if (isset($probleme3)){
    
     ?>
     </fieldset>
-    <input type='submit' value="Envoyer le devis" />
+    <input type='submit' value="Continuer" />
     </form>
     <br/><br/>
     

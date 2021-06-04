@@ -10,8 +10,12 @@
 <br/>
     <a class="link-1" href="mentions-legales.php">Mentions légales</a>
 </p>
-<p>La Maison Du Smartphone &copy; <script type='text/javascript'>var y = new Date();document.write(y.getFullYear());</script></p>
+<p id="logo-footer">La Maison Du Smartphone &copy; <script type='text/javascript'>var y = new Date();document.write(y.getFullYear());</script></p>
 </div>
 </footer>
 </body>
 </html>
+<style>
+
+
+    </style>

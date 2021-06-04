@@ -11,7 +11,7 @@ include("php/header.php");
     
 <main>
     <br/><br/><br/>
-    <h1 class="titre_service_box">Notre Boutique</h1><br/><br/>
+    <h1 class="titre_service_box">Notre Boutique</h1><br/><br/><br/><br/>
   <div class="global_service_box">
     <div class="service_box_colonne">
       <div class="service-box">
