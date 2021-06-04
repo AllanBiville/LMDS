@@ -1,36 +1,36 @@
 <?php
 include("php/header.php");
 session_start();
+$status = "Nouveau devis";
+$_SESSION['status'] = $status;
 
-echo $_SESSION['nom'];
-echo "<br>";
-echo $_SESSION['prenom'];
-echo "<br>";
-echo $_SESSION['email'];
-echo "<br>";
-echo $_SESSION['telephone'];
-echo "<br>";
-echo $_SESSION['marque'];
-echo "<br>";
-echo $_SESSION['modele'];
-echo "<br>";
-echo $_SESSION['probleme'];
-echo "<br>";
-if(isset($_SESSION['probleme2'])){
-echo $_SESSION['probleme2'];
-}
-echo "<br>";
-if(isset($_SESSION['probleme3'])){
-echo $_SESSION['probleme3'];
-}
-echo "<br>";
 $date = date("d.m.y");  
 $_SESSION['date'] = $date;
-echo $_SESSION['date'];
-echo "<br>";
-$status = "Reçu";
-$_SESSION['status'] = $status;
-echo $_SESSION['status'];
+
+
+$nom = $_SESSION['nom'];
+$prenom = $_SESSION['prenom'];
+$email = $_SESSION['email'];
+$telephone = $_SESSION['telephone'];
+$marque = $_SESSION['marque'];
+$modele = $_SESSION['modele'];
+$probleme = $_SESSION['probleme'];
+if(isset($_SESSION['probleme2'])){
+    $probleme2 = $_SESSION['probleme2'];
+}
+if(isset($_SESSION['probleme3'])){
+    $probleme3 = $_SESSION['probleme3'];
+}
+$commentaire = "test";
+
+// if insert into ok, session destroy.
+// si empty probleme, mettre vide.
+// si variable mannquante retour début.
+include("php/connexion_bdd.php");
+$Requete = "INSERT INTO devis (status, date , nom , prenom , email, telephone, marque, modele, probleme1, probleme2, probleme3,commentaire) 
+            VALUES ('$status','$date','$nom','$prenom','$email','$telephone','$marque','$modele','$probleme','$probleme2','$probleme3','$commentaire');";
+$Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
+mysqli_close ( $DataBase ) ;  
 ?>
     
     

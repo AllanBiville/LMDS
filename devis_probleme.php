@@ -33,7 +33,7 @@ echo "<select required name='probleme'>";
 echo "<option disabled selected hidden value=''>";
 echo "=== Choisir un problème ===" ;
 echo "</option>\n" ;
-include("php/connexion_bd_telephone.php");
+include("php/connexion_bdd.php");
 $Requete = "select * from probleme" ;
 $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
 while (  $ligne = mysqli_fetch_array($Resultat)  )
@@ -50,11 +50,11 @@ mysqli_close ( $DataBase ) ;
 
   <div id="probleme2">
   <?php 
-echo "<select name='probleme2'>";
+echo "<select id='probleme20' name='probleme2'>";
 echo "<option disabled selected hidden value=''>";
 echo "=== Choisir un problème ===" ;
 echo "</option>\n" ;
-include("php/connexion_bd_telephone.php");
+include("php/connexion_bdd.php");
 $Requete = "select * from probleme" ;
 $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
 while (  $ligne = mysqli_fetch_array($Resultat)  )
@@ -71,11 +71,11 @@ mysqli_close ( $DataBase ) ;
     </div>
     <div id="probleme3">
   <?php 
-echo "<select name='probleme3'>";
+echo "<select id='probleme30' name='probleme3'>";
 echo "<option disabled selected hidden value=''>";
 echo "=== Choisir un problème ===" ;
 echo "</option>\n" ;
-include("php/connexion_bd_telephone.php");
+include("php/connexion_bdd.php");
 $Requete = "select * from probleme" ;
 $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
 while (  $ligne = mysqli_fetch_array($Resultat)  )

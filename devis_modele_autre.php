@@ -22,7 +22,7 @@ if (isset($_POST['marque2'])){
 echo "<form class='form-devis' method='POST' action='devis_probleme.php'>";
 echo "<fieldset>";
 echo "<legend><span class='number'>3</span>Quel est le modèle de votre téléphone ?</legend><br/><a href='savoir-marque-modele.php' class='savoir-marque-modele'><i class='far fa-question-circle'></i> Comment savoir le modèle ?</a>";
-echo "<input required autofocus='autofocus' style='text-transform: capitalize;' type='text' name='modele2' placeholder='Modele *'>";
+echo "<input minlength='1' maxlength='25' required autofocus='autofocus' style='text-transform: capitalize;' type='text' name='modele2' placeholder='Modele *'>";
 ?>
     </fieldset>
     

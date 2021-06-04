@@ -27,7 +27,7 @@ echo "<select required name='modele'>";
 echo "<option disabled selected hidden value=''>";
 echo "=== Choisir un modèle ===" ;
 echo "</option>\n" ;
-include("php/connexion_bd_telephone.php");
+include("php/connexion_bdd.php");
 $Requete = "select * from modele,marque where modele.id_marque = marque.id_marque and modele.id_marque = $marque" ;
 $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
 while (  $ligne = mysqli_fetch_array($Resultat)  )

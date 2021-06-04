@@ -17,7 +17,7 @@ session_start();
 echo "<form class='form-devis' method='POST' action='devis_modele_autre.php'>";
 echo "<fieldset>";
 echo "<legend><span class='number'>2</span>Quel est la marque de votre téléphone ?</legend><br/><a href='savoir-marque-modele.php' class='savoir-marque-modele'><i class='far fa-question-circle'></i> Comment savoir la marque ?</a>    ";
-echo "<input required autofocus='autofocus' style='text-transform: capitalize;' type='text' name='marque2' placeholder='Marque *'>";
+echo "<input minlength='1' maxlength='25' required autofocus='autofocus' style='text-transform: capitalize;' type='text' name='marque2' placeholder='Marque *'>";
 echo "</fieldset>";
 echo "<a href='devis_marque.php' class='devis_bouton_marque_modele_autre'><i class='fas fa-mobile-alt'></i> Revenir à la liste des téléphones</a>";
 echo "<input type='submit' value='Etape suivante' />";

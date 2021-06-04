@@ -1,8 +1,11 @@
 <?php
 include("php/header.php");
 session_start();
-$probleme = $_POST['probleme'];
-$_SESSION['probleme'] = $probleme;
+if (isset($_POST['probleme'])){
+    $probleme = $_POST['probleme'];
+    $_SESSION['probleme'] = $probleme;
+}
+
 $marque = $_SESSION['marque'];
 $modele = $_SESSION['modele'];
 if(isset($_POST['probleme2'])){
@@ -37,7 +40,7 @@ $_SESSION['probleme3'] = $probleme3;
     echo "<input type='text' readOnly='readOnly' name='telephone' placeholder='Votre téléphone *' value='".$_SESSION['telephone']."'>";
 
     echo "<legend><i class='fas fa-chevron-right'></i>Informations téléphones</legend>";
-    include("php/connexion_bd_telephone.php");
+    include("php/connexion_bdd.php");
     $Requete = "select * from marque where id_marque = '$marque';" ;
     $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
     while (  $ligne = mysqli_fetch_array($Resultat)  )
@@ -55,7 +58,7 @@ $_SESSION['probleme3'] = $probleme3;
     mysqli_close ( $DataBase ) ;  
 
     
-    include("php/connexion_bd_telephone.php");
+    include("php/connexion_bdd.php");
     $Requete = "select * from modele where modele.id_modele = '$modele';" ;
     $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
     while (  $ligne = mysqli_fetch_array($Resultat)  )
@@ -74,7 +77,7 @@ $_SESSION['probleme3'] = $probleme3;
 
 
     echo "<legend><i class='fas fa-chevron-right'></i>Problèmes téléphone</legend>";
-    include("php/connexion_bd_telephone.php");
+    include("php/connexion_bdd.php");
     $Requete = "select * from probleme where id_probleme = $probleme" ;
     $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
     while (  $ligne = mysqli_fetch_array($Resultat)  )
@@ -86,7 +89,7 @@ $_SESSION['probleme3'] = $probleme3;
     }
    
     if (isset($probleme2)){
-    include("php/connexion_bd_telephone.php");
+    include("php/connexion_bdd.php");
     $Requete = "select * from probleme where id_probleme = $probleme2" ;
     $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
     while (  $ligne = mysqli_fetch_array($Resultat)  )
@@ -98,7 +101,7 @@ $_SESSION['probleme3'] = $probleme3;
     }
 }
 if (isset($probleme3)){
-    include("php/connexion_bd_telephone.php");
+    include("php/connexion_bdd.php");
     $Requete = "select * from probleme where id_probleme = $probleme3" ;
     $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
     while (  $ligne = mysqli_fetch_array($Resultat)  )

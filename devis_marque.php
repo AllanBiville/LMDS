@@ -40,7 +40,7 @@ echo "<select required name='marque'>";
 echo "<option disabled selected hidden value=''>";
 echo "=== Choisir une marque ===" ;
 echo "</option>\n" ;
-include("php/connexion_bd_telephone.php");
+include("php/connexion_bdd.php");
 $Requete = "select * from marque" ;
 $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
 while (  $ligne = mysqli_fetch_array($Resultat)  )
