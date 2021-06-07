@@ -1,4 +1,4 @@
-<div class="product_grid">
+<!-- <div class="product_grid">
   <ul class="product_list list">
     <li class="product_item">
       
@@ -351,3 +351,4 @@ ul.product_list {
   }
 }
     </style>
+-->

@@ -11,10 +11,14 @@ $modele = $_SESSION['modele'];
 if(isset($_POST['probleme2'])){
     $probleme2 = $_POST['probleme2'];
 $_SESSION['probleme2'] = $probleme2;
+} else {
+    $_SESSION['probleme2'] = NULL;
 }
 if(isset($_POST['probleme3'])){
     $probleme3 = $_POST['probleme3'];
 $_SESSION['probleme3'] = $probleme3;
+} else {
+    $_SESSION['probleme3'] = NULL;
 }
 ?>
 <main>
@@ -33,7 +37,9 @@ $_SESSION['probleme3'] = $probleme3;
     echo "<fieldset>";
     echo "<legend><span class='number'>5</span>Confirmation de votre devis</legend>"; 
     echo "<br/><hr><br/>";
-    echo "<legend><i class='fas fa-chevron-right'></i>Informations clients</legend>";
+    
+    
+    
     echo "<input type='text' readOnly='readOnly' name='nom' placeholder='Votre nom *' value='".$_SESSION['nom']."'>";
     echo "<input type='text' readOnly='readOnly' name='prenom' placeholder='Votre prénom *' value='".$_SESSION['prenom']."'>";
     echo "<input type='email' readOnly='readOnly' name='email' placeholder='Votre email *' value='".$_SESSION['email']."'>";
@@ -124,7 +130,6 @@ if (isset($probleme3)){
     </fieldset>
     <input type='submit' value="Continuer" />
     </form>
-    <br/><br/>
     
 </main>
 <?php

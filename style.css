@@ -251,7 +251,6 @@
 	width: 95%;
   background-color:white;
 	margin: 30px auto 0px;
-	border-radius: 8px;
   display:block;
 }
 .form-devis fieldset{
@@ -286,6 +285,31 @@
   appearance: none;
   -moz-appearance: none;
 -webkit-appearance: none;
+}
+.form-devis input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius:25%;
+  width:30px;
+  height:30px;
+  padding:0;
+  background-color:#c73d3d;
+  float:left;
+  margin-right:10px;
+}
+.form-devis input[type=checkbox]:checked {
+  background-color: #3dc76b;
+}
+.form-devis input[type=checkbox]:not(:checked) {
+  background-color:#c73d3d;
+}
+.label-checkbox{
+padding:28px;
+display:block;
+}
+.form-devis input[type=checkbox]:valid, .form-devis input[type=checkbox]:invalid{
+  border:none;
 }
 .form-devis input:valid,
 .form-devis textarea:valid,
@@ -362,29 +386,37 @@
 -webkit-appearance: none;
 border:none;
 }
-.form-session_destroy input[type="submit"]{
-	display: block;
-	padding: 19px 39px 18px 39px;
-	color: #FFF;
-  font-weight:bolder;
-	margin: 10px auto 0px;
-	background: #c73d3d;
-	font-size: 18px;
-	text-align: center;
-	width: 100%;
-  width:95%;
-  cursor:pointer;
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  border:none;
-}
 .form-devis input[type="submit"]:hover,
 .form-devis input[type="button"]:hover
 {
 	box-shadow: rgb(0, 0, 0, 0.3) 0px 19px 38px, rgb(0, 0, 0, 0.22) 0px 15px 12px;
 }
+.devis-envoyer{
+  font-size: 50px; 
+  font-weight: bolder; 
+  line-height: 72px; 
+  margin: 100px 0; 
+  text-align: center; 
+  text-transform: uppercase;
+  padding:10px;
+}
+.p-devis-envoyer{
+ font-size: 18px; 
+ font-weight: bolder; 
+ line-height: 32px; 
+ margin: 0 0 24px;
+ text-align:center;
+ padding:10px;
+}
+.logo-devis-envoyer{
+  font-size: 50px;
+}
+.img-devis-envoyer{
+  width:200px;
+  margin:75px auto;
+  display:block;
 
+}
 .container_progress_bar {
   width: 80%;
   margin: 100px auto; 
@@ -417,6 +449,9 @@ border:none;
   .progressbar li{
     font-size:7px;
   }
+  .label-checkbox{
+    padding:20px;
+    }
 }
 .progressbar li:before {
   width: 30px;

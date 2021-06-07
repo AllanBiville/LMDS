@@ -1,6 +1,7 @@
 <?php
 include("php/header.php");
 session_start();
+session_destroy();
 ?>
 <main>
 <div class="container_progress_bar">
@@ -23,9 +24,6 @@ session_start();
     <input pattern="(01|02|03|04|05|06|07|08|09)[ \.\-]?[0-9]{2}[ \.\-]?[0-9]{2}[ \.\-]?[0-9]{2}[ \.\-]?[0-9]{2}" required="required" type="text" name="telephone" placeholder="Votre téléphone *">
     </fieldset>
     <input type="submit" value="Etape suivante" />
-    </form>
-    <form class="form-session_destroy" method="POST" action="php/session_destroy.php">
-    <input type="submit" value="En cas de bug"/>
     </form>
 </main>
 <?php
