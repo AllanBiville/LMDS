@@ -4,7 +4,7 @@ include("php/header.php");
 <div class="conteneur_sous_header">
         <img class="sous_header"></img>
         <div class="sous_header_texte">
-            <h1>Réparations téléphonie, tablettes<br/> et vente d'accessoires</h1>
+            <h1>Réparations téléphones, tablettes<br/> et vente d'accessoires</h1>
             <a href="devis.php">Demander un devis</a>
         </div>
     </div>

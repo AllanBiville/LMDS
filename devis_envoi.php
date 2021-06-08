@@ -44,7 +44,7 @@ if (!empty($_SESSION['marque']) && $_POST['mentions-legales'] == "mentions-ok"){
     mysqli_close ( $DataBase ) ;
     echo "<h1 class='devis-envoyer'><i class='fas fa-check-circle logo-devis-envoyer'></i><br/>Votre devis a bien été envoyé !</h1>";
     echo "<p class='p-devis-envoyer'>La boutique La Maison Du Smartphone vous remercie de votre demande de devis via notre site internet.</p>";
-    echo "<p class='p-devis-envoyer'>Nous allons essayez de vous répondre au plus vite Mr / Mme : ". $_SESSION['nom'].' ' .$_SESSION['prenom'].".</p>";
+    echo "<p class='p-devis-envoyer'>Nous allons vous répondre dans les plus brefs délais Mr / Mme : ". $_SESSION['nom'].' ' .$_SESSION['prenom'].".</p>";
     echo "<p class='p-devis-envoyer'>Redirection vers l'accueil dans 60 secondes...</p>";
     echo "<meta http-equiv='refresh' content='60;URL=index.php'>";
     echo "<img class='img-devis-envoyer' src='images/devis.png'/>"; 
