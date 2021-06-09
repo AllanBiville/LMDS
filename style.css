@@ -41,6 +41,7 @@
   .navigation_logo{
       display:block;
       height:150px;
+      image-rendering: -webkit-optimize-contrast;
   }
   .navigation_logo_phone{
     display:none;
@@ -130,6 +131,7 @@
        color:white;
        font-weight:bolder;
    }
+   
    .sous_header_texte a:hover{
     box-shadow: rgb(0, 0, 0, 0.3) 0px 19px 38px, rgb(0, 0, 0, 0.22) 0px 15px 12px;
 }
@@ -137,7 +139,6 @@
    @media screen and (max-width: 400px){
      .navigation_logo_phone{
        font-size:10px;
-       margin-left:5px;
      }
    }
    @media screen and (max-width: 600px){
@@ -153,6 +154,7 @@
     .sous_header_texte a{
       font-size:20px;
       width:200px;
+      padding:5px;
     }
     .conteneur_header{
       height:50px;
@@ -338,6 +340,15 @@ display:block;
 	line-height: 50px;
 	text-align: center;
 	border-radius: 15px 15px 15px 0px;
+}
+@media screen and (max-width: 500px){
+  .form-devis .number{
+    width:30px;
+    height:30px;
+    font-size:17px;
+    line-height:30px;
+    border-radius: 9px 9px 9px 0;
+  }
 }
 .form-devis .fa-chevron-right {
 	font-size: 22px;
