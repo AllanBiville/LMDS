@@ -4,17 +4,26 @@ session_start();
 session_destroy();
 ?>
 <main>
-<div class="container_progress_bar">
-      <ul class="progressbar">
-          <li class="active">Informations personnelles</li>
-          <li>Marque</li>
-          <li>Modèle</li>
-          <li>Problèmes</li>
-          <li>Confirmation</li>
-  </ul>
-</div>
-<br/><br/><br/><br/><br/><br/>
-
+<ol class="progress">
+  <li class="is-active" data-step="1">
+    <span>Informations clients</span>
+  </li>
+  <li class="not-use" data-step="2">
+  <span>Marque</span>
+  </li>
+  <li class="not-use" data-step="3">
+  <span>Modèle</span>
+  </li>
+  <li class="not-use"data-step="4">
+  <span>Problème(s)</span>
+  </li>
+  <li  class="not-use" data-step="5">
+  <span>Récapitulatif</span>
+  </li>
+  <li  class="not-use" data-step="6" class="progress__last">
+  <span>Infos supp. & Envoi</span>
+  </li>
+</ol>
     <form class="form-devis" method="POST" action="devis_marque.php">
     <fieldset>
     <legend><span class="number">1</span>Informations clients</legend>

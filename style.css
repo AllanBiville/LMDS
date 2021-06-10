@@ -8,7 +8,10 @@
 /* =====================================================================================*/
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
-
+@font-face {
+  font-family: "LaMaisonDuSmartphone";
+  src: url("polices/LaMaisonDuSmartphone.ttf");
+ }
 /* =====================================================================================*/
 /* STYLE PAR DEFAUT                                                                     */
 /* =====================================================================================*/
@@ -46,8 +49,8 @@
   .navigation_logo_phone{
     display:none;
     color:white;
-    font-size:15px;
-    font-family: 'Rock Salt', cursive;
+    font-size: medium;
+    font-family: 'LaMaisonDuSmartphone';
   }
   .navigation a{
     text-decoration:none;
@@ -246,6 +249,72 @@
         font-size:21px;
       }
     }
+
+
+   
+	.separateur-index{
+    width:250px;
+    height:5px;
+    background-color:black;
+    margin:80px auto 80spx;
+  }
+
+	.titre_phototheque{
+    text-align: center;
+    text-transform: uppercase;
+    font-size:45px;
+  }
+	.phototheque img{max-width:100%;}
+	
+	input[type=radio]{position:absolute;left:-9999px}
+	
+.phototheque label{
+	
+cursor:pointer;
+	
+}
+
+.phototheque{
+overflow: hidden;
+position: relative;
+width: 70%;
+max-width:900px;
+margin: 2rem auto	
+}
+.phototheque .photos-mini{
+padding-top: 66.67%;
+display:flex;
+}
+.phototheque .miniature{
+flex: 1;
+padding:.25rem;
+}
+.phototheque .fenetre{
+object-fit: cover;
+position:absolute;
+top:0;
+transition:all .6s;
+left:-100%;
+opacity:0}
+.fen:checked~ .fenetre{
+left:0%;
+opacity:1
+}
+.phototheque figcaption{
+text-align:center;
+position:absolute;
+top:0px;
+left:0;
+padding:.25rem;
+transition:.6s;
+opacity:0;
+display:flex;
+color:white;
+background:hsla(0,0%,0%,.8)
+}
+.fen:checked~figcaption{
+transition:2s;
+opacity:1}
 /* =====================================================================================*/
 /* DEVIS                                                                               */
 /* =====================================================================================*/
@@ -428,77 +497,68 @@ border:none;
   display:block;
 
 }
-.container_progress_bar {
-  width: 80%;
-  margin: 100px auto; 
+.progress {
+  list-style: none;
+  margin: 100px auto 70px;
+  padding: 0;
+  display: table;
+  table-layout: fixed;
+  width: 85%;
+  color: #849397;
 }
-.progressbar {
-  counter-reset: step;
-  margin-top:-30px;
-}
-.progressbar li {
-  list-style-type: none;
-  width: 20%;
-  float: left;
-  font-size: 12px;
+.progress > li {
   position: relative;
+  display: table-cell;
   text-align: center;
-  text-transform: uppercase;
-  color: rgb(33, 48, 53);
+  font-size: 20px;
+
 }
-@media screen and (max-width: 460px){
-  .progressbar li{
-    font-size:9.9px;
-  }
-}
-@media screen and (max-width: 370px){
-  .progressbar li{
-    font-size:8px;
-  }
-}
-@media screen and (max-width: 300px){
-  .progressbar li{
-    font-size:7px;
-  }
-  .label-checkbox{
-    padding:20px;
-    }
-}
-.progressbar li:before {
-  width: 30px;
-  height: 30px;
-  content: counter(step);
-  counter-increment: step;
-  line-height: 30px;
-  border: 2px solid #7d7d7d;
+
+.progress > li:before {
+  content: attr(data-step);
   display: block;
+  margin: 0 auto;
+  background: #DFE3E4;
+  width: 3em;
+  height: 3em;
   text-align: center;
-  margin: 0 auto 10px auto;
+  margin-bottom: 0.25em;
+  line-height: 3em;
   border-radius: 50%;
-  background-color: white;
+  position: relative;
 }
-.progressbar li:after {
-  width: 100%;
-  height: 2px;
+.progress > li:after {
   content: '';
   position: absolute;
-  background-color: #7d7d7d;
-  top: 15px;
-  left: -50%;
+  display: block;
+  background: #DFE3E4;
+  width: 100%;
+  height: 0.5em;
+  top: 1.25em;
+  left: 50%;
+  margin-left: 1.5em\9;
   z-index: -1;
 }
-.progressbar li:first-child:after {
-  content: none;
+.progress > li:last-child:after {
+  display: none;
 }
-.progressbar li.active {
-  color: green;
+
+.progress > li.is-complete span, .progress > li.not-use span {
+  display:none
 }
-.progressbar li.active:before {
-  border-color: #55b776;
+.progress > li.is-complete:before, .progress > li.is-complete:after {
+  color: #FFF;
+  background: #3dc76b;
 }
-.progressbar li.active + li:after {
-  background-color: #55b776;
+.progress > li.is-active{
+  color: rgb(214, 158, 4);
 }
+.progress > li.is-active:before {
+  color: #FFF;
+  background: rgb(214, 158, 4);
+}
+
+
 #probleme2, #probleme3, #add3,#remove2,#remove3{
   display:none;
 }

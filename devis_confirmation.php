@@ -22,20 +22,31 @@ $_SESSION['probleme3'] = $probleme3;
 }
 ?>
 <main>
-<div class="container_progress_bar">
-      <ul class="progressbar">
-          <li class="active">Informations personnelles</li>
-          <li class="active">Marque</li>
-          <li class="active">Modèle</li>
-          <li class="active">Problèmes</li>
-          <li class="active">Confirmation</li>
-  </ul>
-</div>
+<ol class="progress">
+  <li class="is-complete" data-step="1">
+    <span>Informations clients</span>
+  </li>
+  <li class="is-complete" data-step="2">
+  <span>Marque</span>
+  </li>
+  <li class="is-complete" data-step="3">
+  <span>Modèle</span>
+  </li>
+  <li class="is-complete"data-step="4">
+  <span>Problème(s)</span>
+  </li>
+  <li  class="is-active" data-step="5">
+  <span>Récapitulatif</span>
+  </li>
+  <li  class="not-use" data-step="6" class="progress__last">
+  <span>Infos supp. & Envoi</span>
+  </li>
+</ol>
 <br/><br/><br/><br/><br/><br/>
 <?php
     echo "<form class='form-devis' method='POST' action='devis_confirmation_final.php'>";
     echo "<fieldset>";
-    echo "<legend><span class='number'>5</span>Confirmation de votre devis</legend>"; 
+    echo "<legend><span class='number'>5</span>Récapitulatif de votre devis</legend>"; 
     echo "<br/><hr><br/>";
     
     

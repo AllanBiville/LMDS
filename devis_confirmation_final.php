@@ -3,18 +3,26 @@ include("php/header.php");
 session_start();
 ?>
 <main>
-<div class="container_progress_bar">
-      <ul class="progressbar">
-          <li class="active">Informations personnelles</li>
-          <li class="active">Marque</li>
-          <li class="active">Modèle</li>
-          <li class="active">Problèmes</li>
-          <li class="active">Confirmation</li>
-  </ul>
-</div>
-<br/><br/><br/><br/><br/><br/>
-
-
+<ol class="progress">
+  <li class="is-complete" data-step="1">
+    <span>Informations clients</span>
+  </li>
+  <li class="is-complete" data-step="2">
+  <span>Marque</span>
+  </li>
+  <li class="is-complete" data-step="3">
+  <span>Modèle</span>
+  </li>
+  <li class="is-complete"data-step="4">
+  <span>Problème(s)</span>
+  </li>
+  <li  class="is-complete" data-step="5">
+  <span>Récapitulatif</span>
+  </li>
+  <li  class="is-active" data-step="6" class="progress__last">
+  <span>Infos supp. & Envoi</span>
+  </li>
+</ol>
 <?php
 echo "<form class='form-devis' method='POST' action='devis_envoi.php'>";
 echo "<fieldset>";
