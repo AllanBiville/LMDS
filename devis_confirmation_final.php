@@ -29,7 +29,7 @@ echo "<fieldset>";
 echo "<legend><span class='number'>5</span>Confirmation</legend>"; 
 echo "<br/><hr><br/>";
 echo "<legend><i class='fas fa-chevron-right'></i>Un petit commentaire ?</legend>";
-echo "<textarea minlength='2' maxlength='150' autofocus='autofocus' id='commentaire' name='commentaire' rows='5' cols='33' placeholder='Commentaire (optionnel) - 150 caractères maximum'></textarea>";
+echo "<textarea minlength='1' maxlength='150' autofocus='autofocus' id='commentaire' name='commentaire' rows='5' cols='33' placeholder='Commentaire (optionnel) - 150 caractères maximum'></textarea>";
 echo "<legend><i class='fas fa-chevron-right'></i>Infos supplémentaires</legend>";
 ?>
 <input required type="checkbox" name="mentions-legales" id="mentions-legales" value="mentions-ok">

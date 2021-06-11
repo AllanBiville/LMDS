@@ -1,39 +1,47 @@
 <?php
 include("php/header.php");
 session_start();
+function test_input($data){
+    $data = htmlentities($data);
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    $data = strip_tags($data);
+    return $data;
+}
+
 $status = "Nouveau devis";
 $_SESSION['status'] = $status;
 $date = date("d.m.y");  
 $_SESSION['date'] = $date;
-$nom = $_SESSION['nom'];
-$prenom = $_SESSION['prenom'];
-$email = $_SESSION['email'];
-$telephone = $_SESSION['telephone'];
-$marque = $_SESSION['marque'];
-$modele = $_SESSION['modele'];
-$probleme = $_SESSION['probleme'];
+$nom        = test_input($_SESSION['nom']);
+$prenom     = test_input($_SESSION['prenom']);
+$email      = test_input($_SESSION['email']);
+$telephone  = test_input($_SESSION['telephone']);
+$marque     = test_input($_SESSION['marque']);
+$modele     = test_input($_SESSION['modele']);
+$probleme   = test_input($_SESSION['probleme']);
 if(isset($_SESSION['probleme2'])){
-    $probleme2 = $_SESSION['probleme2'];
+    $probleme2 = test_input($_SESSION['probleme2']);
 }
 else{
     $probleme2 = " ";
     $_SESSION['probleme2'] = " ";
 }
 if(isset($_SESSION['probleme3'])){
-    $probleme3 = $_SESSION['probleme3'];
+    $probleme3 = test_input($_SESSION['probleme3']);
 }
 else{
     $probleme3 = " ";
     $_SESSION['probleme3'] = " ";
 }
 if (isset($_POST['commentaire'])){
-    $commentaire = $_POST['commentaire'];
+    $commentaire = test_input($_POST['commentaire']);
     $_SESSION['commentaire'] = $commentaire;
 } else {
     $commentaire = " ";
     $_SESSION['commentaire'] = " ";
 }
-
 
 include("php/connexion_bdd.php");
 

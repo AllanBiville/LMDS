@@ -11,6 +11,9 @@ if (isset($_POST['modele2'])){
   $_SESSION['modele2'] = $modele2;
   $_SESSION['modele'] = NULL;
 }
+if (!isset($_POST['modele']) && !isset($_POST['modele2'])) {
+  header('location:devis_marque.php');
+}
 
 ?>
 <main>

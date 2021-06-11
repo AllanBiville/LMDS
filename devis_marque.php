@@ -1,6 +1,9 @@
 <?php
 include("php/header.php");
 session_start();
+if (empty($_POST['nom']) or empty($_POST['prenom']) or empty($_POST['email']) or empty($_POST['telephone'])) {
+  header('location:devis.php');
+}
 if (isset($_POST['nom'])){
   $nom = $_POST['nom'];
   $_SESSION['nom'] = $nom;

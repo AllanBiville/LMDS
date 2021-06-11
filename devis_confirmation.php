@@ -4,6 +4,8 @@ session_start();
 if (isset($_POST['probleme'])){
     $probleme = $_POST['probleme'];
     $_SESSION['probleme'] = $probleme;
+}else{
+    header('location:devis_probleme.php');
 }
 
 $marque = $_SESSION['marque'];
@@ -42,7 +44,6 @@ $_SESSION['probleme3'] = $probleme3;
   <span>Infos supp. & Envoi</span>
   </li>
 </ol>
-<br/><br/><br/><br/><br/><br/>
 <?php
     echo "<form class='form-devis' method='POST' action='devis_confirmation_final.php'>";
     echo "<fieldset>";

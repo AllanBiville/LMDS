@@ -6,6 +6,9 @@ if (isset($_POST['marque2'])){
     $_SESSION['marque2'] = $marque2;
     $_SESSION['marque'] = NULL;
 }
+if (empty($_POST['marque2'])) {
+  header('location:devis_marque_autre.php');
+}
 ?>
 <main>
 <ol class="progress">
