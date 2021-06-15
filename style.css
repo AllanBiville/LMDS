@@ -256,7 +256,7 @@
     width:250px;
     height:5px;
     background-color:black;
-    margin:80px auto 80spx;
+    margin:80px auto 80px;
   }
 
 	.titre_phototheque{
@@ -357,6 +357,7 @@ opacity:1}
   -moz-appearance: none;
 -webkit-appearance: none;
 }
+/*
 .form-devis input[type=checkbox] {
   appearance: none;
   -webkit-appearance: none;
@@ -379,6 +380,7 @@ opacity:1}
 padding:28px;
 display:block;
 }
+*/
 .form-devis input[type=checkbox]:valid, .form-devis input[type=checkbox]:invalid{
   border:none;
 }
@@ -424,14 +426,6 @@ display:block;
     color:rgb(33, 48, 53);
     margin-right:15px;
   }
-.form-devis select{
-  appearance: none;
-  -moz-appearance: none;
--webkit-appearance: none;
-	height:50px;
-  cursor: pointer;
-  
-}
 .form-devis select:after {
   content: "BC";
   position: absolute;
@@ -598,10 +592,61 @@ border:none;
   cursor:pointer;
   text-decoration:none;
 }
+.protection-ecran{
+
+padding:10px;
+margin:25px 0 25px;
+box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+box-shadow: rgb(6, 24, 44, 0.4) 0px 0px 0px 2px, rgb(6, 24, 44, 0.65) 0px 4px 6px -1px, rgb(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.protection-ecran span:first-child{
+padding:3px 5px;
+font-weight:bolder;
+background-color:rgb(214, 158, 4);
+width:50%;
+min-width:200px;
+text-align:center;
+}
+#protection-checkbox{
+  visibility: hidden;
+  margin: 0;
+  padding:0;
+}
+#protection-checkbox:checked + label {
+  background-color: #3dc76b;
+}
+#protection-checkbox:checked + label:before {
+  transform: translateX(45px);
+  background-color: white;
+}
+
+.span-protection-checkbox label {
+  display: flex;
+  width: 90px;
+  height: 45px;
+  border: 6px solid;
+  border-radius: 99em;
+  position: relative; 
+  cursor: pointer;
+  background-color:#c73d3d;
+}
+.span-protection-checkbox label:before {
+  transition: transform 0.3s ease;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+}
 .savoir-marque-modele{
   color:rgb(42, 144, 207);
-  border: 2px dashed rgb(42, 144, 207);
+  border: 3px dashed rgb(42, 144, 207);
   padding:5px;
+  text-decoration:none;
 }
 .savoir-marque-modele-contenu{
   text-align:center;

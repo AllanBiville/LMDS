@@ -74,7 +74,7 @@ include("php/header.php");
 <div class="phototheque">
 <div class="photos-mini">
 <div class="miniature">
-<input type="radio" checked class="fen" id="lightbox-1" />
+<input name="phototheque" type="radio" checked class="fen" id="lightbox-1" />
 <label for="lightbox-1">
 <img src="images/phototheque/1.jpg" alt>
 </label>
@@ -82,7 +82,7 @@ include("php/header.php");
 <figcaption>La Maison du Smartphone</figcaption>
 </div>
 <div class="miniature">
-<input type="radio" class="fen" id="lightbox-2" />
+<input name="phototheque" type="radio" class="fen" id="lightbox-2" />
 <label for="lightbox-2">
 <img src="images/phototheque/2.jpg" alt>
 </label>
@@ -90,7 +90,7 @@ include("php/header.php");
 <figcaption>La Maison du Smartphone</figcaption>
 </div>
 <div class="miniature">
-<input type="radio" class="fen" id="lightbox-3" />
+<input name="phototheque" type="radio" class="fen" id="lightbox-3" />
 <label for="lightbox-3">
 <img src="images/phototheque/3.jpg" alt>
 </label>
@@ -98,7 +98,7 @@ include("php/header.php");
 <figcaption>La Maison du Smartphone</figcaption>
 </div>
 <div class="miniature">
-<input type="radio" class="fen" id="lightbox-4" />
+<input name="phototheque" type="radio" class="fen" id="lightbox-4" />
 <label for="lightbox-4">
 <img src="images/phototheque/4.jpg" alt>
 </label>
@@ -106,7 +106,7 @@ include("php/header.php");
 <figcaption>La Maison du Smartphone</figcaption>
 </div>
 <div class="miniature">
-<input type="radio" class="fen" id="lightbox-5" />
+<input name="phototheque" type="radio" class="fen" id="lightbox-5" />
 <label for="lightbox-5">
 <img src="images/phototheque/5.jpg" alt>
 </label>
@@ -114,7 +114,7 @@ include("php/header.php");
 <figcaption>La Maison du Smartphone</figcaption>
 </div>
 <div class="miniature">
-<input type="radio" class="fen" id="lightbox-6" />
+<input name="phototheque" type="radio" class="fen" id="lightbox-6" />
 <label for="lightbox-6">
 <img src="images/phototheque/6.jpg" alt>	
 </label>
