@@ -30,14 +30,14 @@ if (!isset($_SESSION['probleme'])){
 - Invisble Shield est la protection d’écran la plus fiable du marché et la plus vendue aux Etats-Unis.<br/><br/>
 <b>Cochez cette case pour en profitez :</b>
 <span class="span-protection-checkbox">
-	<input type="checkbox" id="protection-checkbox"/>
+	<input type="checkbox" id="protection-checkbox" name="protection-checkbox" value="Oui"/>
 	<label for="protection-checkbox"></label>
 </span>
 </p>
 
 
 </fieldset>
-<input type='submit' value="Envoyer" />
+<input type='submit' value="Etape suivante" />
 </form>
 </main>
 <style>
