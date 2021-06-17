@@ -90,9 +90,36 @@ $modele = $_SESSION['modele'];
         echo "<input type='text' readOnly='readOnly' name='protection-checkbox1' value='Non, je ne veux pas de protection d&apos;écran Invisible Shield !'></input>";
     }
     ?>
+    <legend><i class="fas fa-chevron-right"></i>Mentions légales</legend>
+
+    <script>
+function choix()
+{
+    var validation = document.getElementById('validation');
+    var inputMentions = document.getElementById('mentions-legales');
+    if (inputMentions.checked == false){
+        validation.disabled = true;
+    }
+    if (inputMentions.checked == true){
+        validation.disabled = false;
+    }
+    
+}
+</script>
+<p class="mentions-legales">
+- J'accepte les <a href="mentions-legales.php">mentions légales</a> du site<br/>
+- J'autorise que mes données enregistrés dans ce formulaire soit stockés dans une base de données uniquement dans le cadre du devis.
+<br/><br/>
+<b>Cochez cette case pour accepter :</b>
+<span class="span-mentions-legales">
+	<input type="checkbox" id="mentions-legales" onClick="choix();" required="required" name="mentions-legales" value="Oui"/>
+	<label for="mentions-legales"></label>
+</span>
+</p>
     </fieldset>
-    <input type='submit' value="Envoyer" />
+    <input type='submit' id="validation" disabled="disabled" value="Envoyer" />
     </form>   
+
 </main>
 <?php
 include("php/footer.php");
