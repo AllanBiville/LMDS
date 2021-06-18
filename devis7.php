@@ -1,19 +1,9 @@
 <?php
 include("php/header.php");
 session_start();
-function test_input($data){
-    $data = htmlentities($data);
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    $data = strip_tags($data);
-    return $data;
-}
 
 $status = "Nouveau devis";
-$_SESSION['status'] = $status;
 $date = date("d.m.y");  
-$_SESSION['date'] = $date;
 $nom        = test_input($_SESSION['nom']);
 $prenom     = test_input($_SESSION['prenom']);
 $email      = test_input($_SESSION['email']);
@@ -56,15 +46,7 @@ if (!empty($_SESSION['marque']) && $_POST['mentions-legales'] == "mentions-ok"){
     echo "<p class='p-devis-envoyer'>Redirection vers l'accueil dans 60 secondes...</p>";
     echo "<meta http-equiv='refresh' content='60;URL=index.php'>";
     echo "<img class='img-devis-envoyer' src='images/devis.png'/>"; 
-    session_destroy();  
-    if (isset($_POST['newsletters'])){
-        include("php/connexion_bdd.php");
-        $newsletters  = $_POST['newsletters'];
-        $Requete = "INSERT INTO newsletters (email) 
-        VALUES ('$email');";
-        $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
-        mysqli_close ( $DataBase ) ;
-    }       
+    session_destroy();   
 } else {
     echo "<meta http-equiv='refresh' content='0;URL=index.php'>";
 }

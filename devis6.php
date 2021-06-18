@@ -1,17 +1,30 @@
 <?php
 include("php/header.php");
 session_start();
+function test_input($data){
+    $data = trim($data); // - espace
+    $data = stripslashes($data); // - \
+    $data = strip_tags($data); // - <balise>
+    return $data;
+}
 if (isset($_POST['commentaire'])){
     $_SESSION['commentaire'] = $_POST['commentaire'];
-} else if (!isset($_SESSION['commentaire'])){
-    $_SESSION['commentaire'] = "Aucun";
 }
 
 if  (isset($_POST['protection-checkbox'])){
     $_SESSION['protection-checkbox'] = $_POST['protection-checkbox'];
-} else {
-    $_SESSION['protection-checkbox'] = "Non";
 }
+
+
+
+$_SESSION['nom'] = test_input($_SESSION['nom']);
+$_SESSION['prenom'] = test_input($_SESSION['prenom']);
+$_SESSION['email'] = test_input($_SESSION['email']);
+$_SESSION['telephone'] = test_input($_SESSION['telephone']);
+//$_SESSION['marque'] = test_input($_SESSION['marque']);
+//$_SESSION['modele'] = test_input($_SESSION['modele']);
+//$_SESSION['marque2'] = test_input($_SESSION['marque2']);
+//$_SESSION['modele2'] = test_input($_SESSION['modele2']);
 $marque = $_SESSION['marque'];
 $modele = $_SESSION['modele'];
 ?>
@@ -75,16 +88,20 @@ $modele = $_SESSION['modele'];
     echo "<legend><i class='fas fa-chevron-right'></i>Problèmes téléphone</legend>";
         echo "<input type='text' readOnly='readOnly' name='probleme' placeholder='Problème 1 *' value='".$_SESSION['probleme']."'>";
     if (isset($_SESSION['probleme2'])){
+        $_SESSION['probleme2'] = test_input($_SESSION['probleme2']);
         echo "<input type='text' readOnly='readOnly' name='probleme2' placeholder='Problème 2 *' value='".$_SESSION['probleme2']."'>";
     }
     if (isset($_SESSION['probleme3'])){
+        $_SESSION['probleme3'] = test_input($_SESSION['probleme3']);
         echo "<input type='text' readOnly='readOnly' name='probleme3' placeholder='Problème 3 *' value='".$_SESSION['probleme3']."'>";
     } 
     echo "<legend><i class='fas fa-chevron-right'></i>Commentaire</legend>";
+    $_SESSION['commentaire'] = test_input($_SESSION['commentaire']);
     echo "<textarea style='resize : none;' readOnly='readOnly' id='commentaire' name='commentaire' rows='5' cols='33' placeholder='Aucun commentaire'>".$_SESSION['commentaire']."</textarea>";
 
     echo "<legend><i class='fas fa-chevron-right'></i>Protection écran</legend>";
     if ($_SESSION['protection-checkbox'] == "Oui"){
+        $_SESSION['protection-checkbox'] = test_input($_SESSION['protection-checkbox']);
     echo "<input type='text' readOnly='readOnly' name='protection-checkbox1' value='Oui, je veux la protection d&apos;écran Invisible Shield et profitez de 5% sur mon devis !'></input>";
     } else {
         echo "<input type='text' readOnly='readOnly' name='protection-checkbox1' value='Non, je ne veux pas de protection d&apos;écran Invisible Shield !'></input>";
