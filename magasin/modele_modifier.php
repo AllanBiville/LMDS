@@ -4,12 +4,13 @@ include("header.php");
 include("verification.php");
 if (isset($_GET['modifierModele'])){
     $modifierModele = $_GET['modifierModele'];
+    $modifierModeleMarque = $_GET['modifierModeleMarque'];
     $id_modele = $_GET['id_modele'];
     include('../php/connexion_bdd.php');
-    $Requete = "UPDATE modele SET nom_marque = '$modifierMarque'  where id_marque=$id_marque; " ;
+    $Requete = "UPDATE modele SET nom_modele = '$modifierModele', id_marque = '$modifierModeleMarque'  where id_modele='$id_modele'; " ;
     $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
     mysqli_close ( $DataBase ) ;
-    header("location:marque.php");  
+    header("location:modele.php");  
     exit();
 }
 ?>

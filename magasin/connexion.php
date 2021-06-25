@@ -16,6 +16,7 @@ integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b
  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
  crossorigin="anonymous"></script>
  <link rel="stylesheet" href="style-magasin.css">  
+ <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
 </head>
 <body class="text-center"> 
 <main class="form-signin">
