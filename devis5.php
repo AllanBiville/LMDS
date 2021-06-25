@@ -6,9 +6,13 @@ if (isset($_POST['probleme'])){
 }
 if(isset($_POST['probleme2'])){
 $_SESSION['probleme2'] = $_POST['probleme2'];
+} else{
+    $_SESSION['probleme2'] = "Non";
 }
 if(isset($_POST['probleme3'])){
 $_SESSION['probleme3'] = $_POST['probleme3'];
+}else{
+    $_SESSION['probleme3'] = "Non";
 }
 if (!isset($_SESSION['probleme'])){
     header('location:devis4.php');

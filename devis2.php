@@ -41,7 +41,7 @@ while ($ligne = mysqli_fetch_array($Resultat)){
     echo $ligne['nom_marque'];
     echo "</option>";
 }
-echo "<select>";
+echo "</select>";
 mysqli_free_result($Resultat);
 mysqli_close($DataBase);
 ?>

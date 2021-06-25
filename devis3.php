@@ -28,7 +28,7 @@ while ($ligne = mysqli_fetch_array($Resultat)){
     echo $ligne['nom_modele'];
     echo "</option>";
 }
-echo "<select>";
+echo "</select>";
 mysqli_free_result($Resultat);
 mysqli_close($DataBase);
 ?>

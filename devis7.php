@@ -1,7 +1,12 @@
 <?php
 include("php/header.php");
 session_start();
-
+function test_input($data){
+    $data = trim($data); // - espace
+    $data = stripslashes($data); // - \
+    $data = strip_tags($data); // - <balise>
+    return $data;
+}
 $status = "Nouveau devis";
 $date = date("d.m.y");  
 $nom        = test_input($_SESSION['nom']);
@@ -11,33 +16,18 @@ $telephone  = test_input($_SESSION['telephone']);
 $marque     = test_input($_SESSION['marque']);
 $modele     = test_input($_SESSION['modele']);
 $probleme   = test_input($_SESSION['probleme']);
-if(isset($_SESSION['probleme2'])){
-    $probleme2 = test_input($_SESSION['probleme2']);
+$probleme2 = test_input($_SESSION['probleme2']);
+$probleme3 = test_input($_SESSION['probleme3']);
+if (!isset($_POST['mentions-legales'])){
+    header('location:devis6.php');
 }
-else{
-    $probleme2 = " ";
-    $_SESSION['probleme2'] = " ";
-}
-if(isset($_SESSION['probleme3'])){
-    $probleme3 = test_input($_SESSION['probleme3']);
-}
-else{
-    $probleme3 = " ";
-    $_SESSION['probleme3'] = " ";
-}
-if (isset($_POST['commentaire'])){
-    $commentaire = test_input($_POST['commentaire']);
-    $_SESSION['commentaire'] = $commentaire;
-} else {
-    $commentaire = " ";
-    $_SESSION['commentaire'] = " ";
-}
-
+$commentaire = test_input($_SESSION['commentaire']);
+$protection = test_input($_SESSION['protection-checkbox']);
 include("php/connexion_bdd.php");
 
-if (!empty($_SESSION['marque']) && $_POST['mentions-legales'] == "mentions-ok"){
-    $Requete = "INSERT INTO devis (status, date , nom , prenom , email, telephone, marque, modele, probleme1, probleme2, probleme3,commentaire) 
-                VALUES ('$status','$date','$nom','$prenom','$email','$telephone','$marque','$modele','$probleme','$probleme2','$probleme3','$commentaire');";
+if ($_POST['mentions-legales'] == "Oui"){
+    $Requete = "INSERT INTO devis (status, date , nom , prenom , email, telephone, marque, modele, probleme1, probleme2, probleme3,commentaire, protection) 
+                VALUES ('$status','$date','$nom','$prenom','$email','$telephone','$marque','$modele','$probleme','$probleme2','$probleme3','$commentaire','$protection');";
     $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
     mysqli_close ( $DataBase ) ;
     echo "<h1 class='devis-envoyer'><i class='fas fa-check-circle logo-devis-envoyer'></i><br/>Votre devis a bien été envoyé !</h1>";
@@ -50,8 +40,6 @@ if (!empty($_SESSION['marque']) && $_POST['mentions-legales'] == "mentions-ok"){
 } else {
     echo "<meta http-equiv='refresh' content='0;URL=index.php'>";
 }
-
-
 ?>
 <?php
 include("php/footer.php");

@@ -1,30 +1,32 @@
 <?php
 include("php/header.php");
 session_start();
+if (isset($_POST['commentaire']) && $_POST['commentaire'] == ""){
+    $_SESSION['commentaire'] = "Non";
+} else{
+    $_SESSION['commentaire'] = test_input($_POST['commentaire']);
+}
+
+if  (isset($_POST['protection-checkbox'])){
+    $_SESSION['protection-checkbox'] = $_POST['protection-checkbox'];
+} else {
+    $_SESSION['protection-checkbox'] = "Non";
+}
+if (!isset($_SESSION['commentaire'])){
+    header('location:devis5.php');
+}
 function test_input($data){
     $data = trim($data); // - espace
     $data = stripslashes($data); // - \
     $data = strip_tags($data); // - <balise>
     return $data;
 }
-if (isset($_POST['commentaire'])){
-    $_SESSION['commentaire'] = $_POST['commentaire'];
-}
-
-if  (isset($_POST['protection-checkbox'])){
-    $_SESSION['protection-checkbox'] = $_POST['protection-checkbox'];
-}
-
-
 
 $_SESSION['nom'] = test_input($_SESSION['nom']);
 $_SESSION['prenom'] = test_input($_SESSION['prenom']);
 $_SESSION['email'] = test_input($_SESSION['email']);
 $_SESSION['telephone'] = test_input($_SESSION['telephone']);
-//$_SESSION['marque'] = test_input($_SESSION['marque']);
-//$_SESSION['modele'] = test_input($_SESSION['modele']);
-//$_SESSION['marque2'] = test_input($_SESSION['marque2']);
-//$_SESSION['modele2'] = test_input($_SESSION['modele2']);
+
 $marque = $_SESSION['marque'];
 $modele = $_SESSION['modele'];
 ?>
@@ -51,11 +53,13 @@ $modele = $_SESSION['modele'];
         }
     }
     if (isset($_SESSION['marque'])){
+        $_SESSION['marque'] = test_input($_SESSION['marque']);
         echo "<input type='text' readOnly='readOnly' name='marque' placeholder='Marque *' value='".$_SESSION['marque']."'>";
     }
     
 
     if (isset($_SESSION['marque2'])){
+        $_SESSION['marque2'] = test_input($_SESSION['marque2']);
         echo "<input type='text' readOnly='readOnly' name='marque' placeholder='Marque *' value='".$_SESSION['marque2']."'>";
         $_SESSION['marque'] = $_SESSION['marque2'];
     }
@@ -73,11 +77,13 @@ $modele = $_SESSION['modele'];
         }
     }
     if (isset($_SESSION['modele'])){
+        $_SESSION['modele'] = test_input($_SESSION['modele']);
         echo "<input type='text' readOnly='readOnly' name='modele' placeholder='Modele *' value='".$_SESSION['modele']."'>";
     }
     
 
     if (isset($_SESSION['modele2'])){
+        $_SESSION['modele2'] = test_input($_SESSION['modele2']);
         echo "<input type='text' readOnly='readOnly' name='modele' placeholder='Modèle *' value='".$_SESSION['modele2']."'>";
         $_SESSION['modele'] = $_SESSION['modele2'];
     }
@@ -87,14 +93,11 @@ $modele = $_SESSION['modele'];
 
     echo "<legend><i class='fas fa-chevron-right'></i>Problèmes téléphone</legend>";
         echo "<input type='text' readOnly='readOnly' name='probleme' placeholder='Problème 1 *' value='".$_SESSION['probleme']."'>";
-    if (isset($_SESSION['probleme2'])){
         $_SESSION['probleme2'] = test_input($_SESSION['probleme2']);
         echo "<input type='text' readOnly='readOnly' name='probleme2' placeholder='Problème 2 *' value='".$_SESSION['probleme2']."'>";
-    }
-    if (isset($_SESSION['probleme3'])){
+
         $_SESSION['probleme3'] = test_input($_SESSION['probleme3']);
         echo "<input type='text' readOnly='readOnly' name='probleme3' placeholder='Problème 3 *' value='".$_SESSION['probleme3']."'>";
-    } 
     echo "<legend><i class='fas fa-chevron-right'></i>Commentaire</legend>";
     $_SESSION['commentaire'] = test_input($_SESSION['commentaire']);
     echo "<textarea style='resize : none;' readOnly='readOnly' id='commentaire' name='commentaire' rows='5' cols='33' placeholder='Aucun commentaire'>".$_SESSION['commentaire']."</textarea>";
