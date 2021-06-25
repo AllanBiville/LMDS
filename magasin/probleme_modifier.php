@@ -15,7 +15,7 @@ if (isset($_GET['modifierProbleme'])){
 <?php
 $id_probleme = $_GET['id_probleme'];
 echo "<h1>Modifier problème n°".$id_probleme."</h1><br/>";
-echo "<form class='form-magasin' action='probleme_modifier' method='GET'>";
+echo "<form class='form-magasin' action='probleme_modifier.php' method='GET'>";
 include('../php/connexion_bdd.php');
 $Requete = "Select * From probleme where id_probleme = $id_probleme;" ;
 $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
