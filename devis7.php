@@ -24,7 +24,28 @@ if (!isset($_POST['mentions-legales'])){
 $commentaire = test_input($_SESSION['commentaire']);
 $protection = test_input($_SESSION['protection-checkbox']);
 include("php/connexion_bdd.php");
-
+?>
+<ol class="progress">
+  <li class="is-complete" data-step="1">
+    Client
+  </li>
+  <li class="is-complete" data-step="2">
+    Téléphone
+  </li>
+  <li class="is-complete" data-step="3">
+    Problème(s)
+  </li>
+  <li class="is-complete" data-step="4">
+    Commentaire &<br/>Protection écran
+  </li>
+  <li class="is-complete" data-step="5">
+    Récapitulatif
+  </li>
+  <li class="is-complete" data-step="6">
+    Envoi
+  </li>
+</ol>
+<?php
 if ($_POST['mentions-legales'] == "Oui"){
     $Requete = "INSERT INTO devis (status, date , nom , prenom , email, telephone, marque, modele, probleme1, probleme2, probleme3,commentaire, protection) 
                 VALUES ('$status','$date','$nom','$prenom','$email','$telephone','$marque','$modele','$probleme','$probleme2','$probleme3','$commentaire','$protection');";
@@ -38,7 +59,7 @@ if ($_POST['mentions-legales'] == "Oui"){
     echo "<img class='img-devis-envoyer' src='images/devis.png'/>"; 
     session_destroy();   
 } else {
-    echo "<meta http-equiv='refresh' content='0;URL=index.php'>";
+    echo "<meta http-equiv='refresh' content='0;URL=devis6.php'>";
 }
 ?>
 <?php

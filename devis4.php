@@ -13,8 +13,27 @@ if (!isset($_SESSION['modele']) && !isset($_SESSION['modele2'])){
     header('location:devis3.php');
 }
 ?>
+<ol class="progress">
+  <li class="is-complete" data-step="1">
+    Client
+  </li>
+  <li class="is-complete" data-step="2">
+    Téléphone
+  </li>
+  <li class="is-active" data-step="3">
+    Problème(s)
+  </li>
+  <li data-step="4">
+    Commentaire &<br/>Protection écran
+  </li>
+  <li data-step="5">
+    Récapitulatif
+  </li>
+  <li data-step="6">
+    Envoi
+  </li>
+</ol>
 <main>
-
 <form class="form-devis" method="POST" action="devis5.php">
     <fieldset>
     <legend><span class="number">4</span>Quel est votre problème ?</legend>    

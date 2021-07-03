@@ -8,6 +8,26 @@ if (isset($_POST['marque2'])){
     header('location:devis2b.php');
 }
 ?>
+<ol class="progress">
+  <li class="is-complete" data-step="1">
+    Client
+  </li>
+  <li class="is-active" data-step="2">
+    Téléphone
+  </li>
+  <li data-step="3">
+    Problème(s)
+  </li>
+  <li data-step="4">
+    Commentaire &<br/>Protection écran
+  </li>
+  <li data-step="5">
+    Récapitulatif
+  </li>
+  <li data-step="6">
+    Envoi
+  </li>
+</ol>
 <main>
 <form class="form-devis" method="POST" action="devis4.php">
 <fieldset>

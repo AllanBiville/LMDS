@@ -22,6 +22,26 @@ if (isset($_POST['telephone'])){
     header('location:devis.php');
 } 
 ?>
+<ol class="progress">
+  <li class="is-complete" data-step="1">
+    Client
+  </li>
+  <li class="is-active" data-step="2">
+    Téléphone
+  </li>
+  <li data-step="3">
+    Problème(s)
+  </li>
+  <li data-step="4">
+    Commentaire &<br/>Protection écran
+  </li>
+  <li data-step="5">
+    Récapitulatif
+  </li>
+  <li data-step="6">
+    Envoi
+  </li>
+</ol>
 <main>
 <form class="form-devis" method="POST" action="devis3.php">
 <fieldset>
@@ -30,7 +50,7 @@ if (isset($_POST['telephone'])){
 <a href="savoir-marque-modele.php" class="savoir-marque-modele"><i class="far fa-question-circle"></i> Comment savoir la marque ?</a>
 <?php
 echo "<select required name='marque'>";
-echo "<opton disabled selected hidden value=''>";
+echo "<option disabled selected hidden value='0'>";
 echo "=== Choisir une marque ===";
 echo "</option>";
 include("php/connexion_bdd.php");

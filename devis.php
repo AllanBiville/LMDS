@@ -3,6 +3,26 @@ include("php/header.php");
 session_start();
 session_destroy();
 ?>
+<ol class="progress">
+  <li class="is-active" data-step="1">
+    Client
+  </li>
+  <li data-step="2">
+    Téléphone
+  </li>
+  <li data-step="3">
+    Problème(s)
+  </li>
+  <li data-step="4">
+    Commentaire &<br/>Protection écran
+  </li>
+  <li data-step="5">
+    Récapitulatif
+  </li>
+  <li data-step="6">
+    Envoi
+  </li>
+</ol>
 <main>
 <form class="form-devis" method="POST" action="devis2.php">
 <fieldset>

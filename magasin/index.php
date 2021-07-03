@@ -25,7 +25,6 @@ include('../php/connexion_bdd.php');
     echo "<td>" . $ligne['nom'] . "</td>\n" ;
     echo "<td>" . $ligne['prenom'] . "</td>\n" ;
     echo "<td><a class='btn btn-primary' href='devis_info.php?id_devis=". $ligne['id_devis']."'><i class='fas fa-eye'></i></a>" ;
-    echo " <a class='btn btn-secondary disabled' href='devis_modifier.php?id_devis=". $ligne['id_devis']."'><i class='fas fa-pen'></i></a>" ;
     echo " <a class='btn btn-success disabled'  href='devis_repondre.php?id_devis=". $ligne['id_devis']."'><i class='fas fa-paper-plane'></i></a>" ;
     echo " <a class='btn btn-danger' href='devis_supprimer.php?id_devis=". $ligne['id_devis']."' onclick='return ConfirmSuppr();'><i class='fas fa-trash-alt'></i></a></td>\n" ;
     echo "</tr>\n" ;

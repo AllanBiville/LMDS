@@ -9,6 +9,26 @@ if (isset($_POST['marque'])){
     header('location:devis2.php');
 }
 ?>
+<ol class="progress">
+  <li class="is-complete" data-step="1">
+    Client
+  </li>
+  <li class="is-active" data-step="2">
+    Téléphone
+  </li>
+  <li data-step="3">
+    Problème(s)
+  </li>
+  <li data-step="4">
+    Commentaire &<br/>Protection écran
+  </li>
+  <li data-step="5">
+    Récapitulatif
+  </li>
+  <li data-step="6">
+    Envoi
+  </li>
+</ol>
 <main>
 <form class="form-devis" method="POST" action="devis4.php">
 <fieldset>
@@ -17,7 +37,7 @@ if (isset($_POST['marque'])){
 <a href="savoir-marque-modele.php" class="savoir-marque-modele"><i class="far fa-question-circle"></i> Comment savoir le modèle ?</a>
 <?php
 echo "<select required name='modele'>";
-echo "<opton disabled selected hidden value=''>";
+echo "<option disabled selected hidden value=''>";
 echo "=== Choisir un modèle ===";
 echo "</option>";
 include("php/connexion_bdd.php");

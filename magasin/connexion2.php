@@ -1,7 +1,21 @@
 <?php
 session_start();
-$username = $_POST['username'];
-$password = $_POST['password'];
+function test_input($data){
+  $data = trim($data); // - espace
+  $data = stripslashes($data); // - \
+  $data = strip_tags($data); // - <balise>
+  return $data;
+}
+$username = test_input($_POST['username']);
+$password = test_input($_POST['password']);
+if ($username == "' or 1 --"){
+  header('location:connexion.php');
+  exit();
+}
+if ($password == "' or 1 --"){
+  header('location:connexion.php');
+  exit();
+}
 include('../php/connexion_bdd.php');
 $Requete = "select * from utilisateurs 
             where username= '$username'

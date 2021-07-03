@@ -34,7 +34,7 @@ echo "<tr style='background-color:#212529; color:white;'>
             <th> Actions </th>
         </tr>";
 include('../php/connexion_bdd.php');
-    $Requete = "Select * From marque, modele where marque.id_marque = modele.id_marque ORDER BY marque.nom_marque;" ;
+    $Requete = "Select * From marque, modele where marque.id_marque = modele.id_marque ORDER BY nom_modele, nom_marque;" ;
     $Resultat = mysqli_query ( $DataBase, $Requete )  or  die(mysqli_error($DataBase) ) ;
     while (  $ligne = mysqli_fetch_array($Resultat)  )
     { 

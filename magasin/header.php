@@ -19,9 +19,13 @@ integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b
  <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
 </head>
 <body class="text-center"> 
-<h1 class="titre-header">La Maison Du Smartphone<br/>Interface Magasin</h1>
+<h1 class="titre-header">La Maison Du Smartphone<br/>Interface Magasin<br/>
+<form action="deconnexion.php" method="GET">
+    <input class="btn btn-dark btn-lg" type="submit" name="deconnexion" value="Déconnexion"/>
+    </form>
+    </h1>
 <ul class="navbar navbar-light bg-dark justify-content-center">
-<br/><br/><br/><br/>
+<br/><br/><br/>
   <li class="nav-item">
     <a class="btn btn-dark btn-lg" href="index.php">Devis</a>
   </li>

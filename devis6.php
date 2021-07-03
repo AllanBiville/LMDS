@@ -1,6 +1,12 @@
 <?php
 include("php/header.php");
 session_start();
+function test_input($data){
+    $data = trim($data); // - espace
+    $data = stripslashes($data); // - \
+    $data = strip_tags($data); // - <balise>
+    return $data;
+}
 if (isset($_POST['commentaire']) && $_POST['commentaire'] == ""){
     $_SESSION['commentaire'] = "Non";
 } else{
@@ -12,15 +18,7 @@ if  (isset($_POST['protection-checkbox'])){
 } else {
     $_SESSION['protection-checkbox'] = "Non";
 }
-if (!isset($_SESSION['commentaire'])){
-    header('location:devis5.php');
-}
-function test_input($data){
-    $data = trim($data); // - espace
-    $data = stripslashes($data); // - \
-    $data = strip_tags($data); // - <balise>
-    return $data;
-}
+
 
 $_SESSION['nom'] = test_input($_SESSION['nom']);
 $_SESSION['prenom'] = test_input($_SESSION['prenom']);
@@ -30,6 +28,26 @@ $_SESSION['telephone'] = test_input($_SESSION['telephone']);
 $marque = $_SESSION['marque'];
 $modele = $_SESSION['modele'];
 ?>
+<ol class="progress">
+  <li class="is-complete" data-step="1">
+    Client
+  </li>
+  <li class="is-complete" data-step="2">
+    Téléphone
+  </li>
+  <li class="is-complete" data-step="3">
+    Problème(s)
+  </li>
+  <li class="is-complete" data-step="4">
+    Commentaire &<br/>Protection écran
+  </li>
+  <li class="is-active" data-step="5">
+    Récapitulatif
+  </li>
+  <li data-step="6">
+    Envoi
+  </li>
+</ol>
 <main> 
 <?php
     echo "<form class='form-devis' method='POST' action='devis7.php'>";
@@ -94,10 +112,15 @@ $modele = $_SESSION['modele'];
     echo "<legend><i class='fas fa-chevron-right'></i>Problèmes téléphone</legend>";
         echo "<input type='text' readOnly='readOnly' name='probleme' placeholder='Problème 1 *' value='".$_SESSION['probleme']."'>";
         $_SESSION['probleme2'] = test_input($_SESSION['probleme2']);
-        echo "<input type='text' readOnly='readOnly' name='probleme2' placeholder='Problème 2 *' value='".$_SESSION['probleme2']."'>";
-
+        if ($_SESSION['probleme2'] != "Non"){
+            echo "<input type='text' readOnly='readOnly' name='probleme2' placeholder='Problème 2 *' value='".$_SESSION['probleme2']."'>";
+        }
+        
         $_SESSION['probleme3'] = test_input($_SESSION['probleme3']);
-        echo "<input type='text' readOnly='readOnly' name='probleme3' placeholder='Problème 3 *' value='".$_SESSION['probleme3']."'>";
+        if ($_SESSION['probleme3'] != "Non"){
+            echo "<input type='text' readOnly='readOnly' name='probleme3' placeholder='Problème 3 *' value='".$_SESSION['probleme3']."'>";
+        }
+        
     echo "<legend><i class='fas fa-chevron-right'></i>Commentaire</legend>";
     $_SESSION['commentaire'] = test_input($_SESSION['commentaire']);
     echo "<textarea style='resize : none;' readOnly='readOnly' id='commentaire' name='commentaire' rows='5' cols='33' placeholder='Aucun commentaire'>".$_SESSION['commentaire']."</textarea>";

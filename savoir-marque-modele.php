@@ -8,7 +8,7 @@ include('php/header.php');
         <img class="sous_header"></img>
         <div class="sous_header_texte">
             <h1>Comment savoir la marque ou le modèle de son téléphone ?</h1>
-            <a href="javascript:history.go(-2)">Retour au devis</a>
+            <a href="devis7.php">Retour au devis</a>
         </div>
     </div>
     

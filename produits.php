@@ -1,354 +1,290 @@
-<!-- <div class="product_grid">
-  <ul class="product_list list">
-    <li class="product_item">
-      
-      <div class="product_image">
-        <a href="#"><img src="images/logo.png" alt=""></a>
+
+<h1 class="project-title">  Smartphone e-commerce cards</h1>
+<div class="container">
+  <div class="grid">
+
+    <div class="card-container">
+      <h2 class="card-price"><span class="currency">$</span>1200</h2>
+      <h1 class="card-title">iPhone Х</h1>
+      <p class="details-btn">click to view</p>
+      <div class="card-image-container">
+         <img src="https://clipart-db.ru/file_content/rastr/smartphone_025.png" alt=""/>
       </div>
-      <div class="product_values">
-        <div class="product_title">
-          <h5>White Fancy Dress</h5>
-        </div>
-        <div class="product_price">
-          <a href="#"><span class="price_old">$79.99</span> <span class="price_new">$69.99</span></a>
-           
-        </div>
-        <div class="product_desc">
-          <p class="truncate">Sed sodales odio non metus tincidunt consectetur. Integer non lobortis orci. In hac habitasse platea dictumst. Suspendisse sit amet condimentum arcu. Curabitur venenatis interdum lectus, vitae egestas sem facilisis sit amet. Praesent tortor purus, vulputate at ultricies quis, aliquet sed ante.</p>
-        </div>
+      <i class="fas fa-cart-plus cart-btn"></i>
+    </div>
+
+    <div class="card-container">
+      <h2 class="card-price"><span class="currency">$</span>800</h2>
+      <h1 class="card-title">Samsung r8</h1>
+      <p class="details-btn">click to view</p>
+      <div class="card-image-container">
+         <img src="http://purepng.com/public/uploads/large/purepng.com-android-smartphonepersonal-computersmartphonemobile-operating-systemcellular-phoneandroid-1701528391092ypwe7.png" alt=""/>
       </div>
-    </li>
-    <li class="product_item">
-      <div class="product_image">
-        <a href="#"><img src="images/logo.png" alt=""></a>
+      <i class="fas fa-cart-plus cart-btn"></i>
+    </div>
+
+    <div class="card-container">
+      <h2 class="card-price"><span class="currency">$</span>750</h2>
+      <h1 class="card-title">HUAWAI 5</h1>
+      <p class="details-btn">click to view</p>
+      <div class="card-image-container">
+         <img src="https://www.pngarts.com/files/3/Smartphone-PNG-High-Quality-Image.png" alt=""/>
       </div>
-      <div class="product_values">
-        <div class="product_title">
-          <h5>White Fancy Dress</h5>
-        </div>
-        <div class="product_price">
-          <a href="#"><span class="price_old">$79.99</span> <span class="price_new">$69.99</span></a>
-           
-        </div>
-        <div class="product_desc">
-          <p class="truncate">Sed sodales odio non metus tincidunt consectetur. Integer non lobortis orci. In hac habitasse platea dictumst. Suspendisse sit amet condimentum arcu. Curabitur venenatis interdum lectus, vitae egestas sem facilisis sit amet. Praesent tortor purus, vulputate at ultricies quis, aliquet sed ante.</p>
-        </div>
+      <i class="fas fa-cart-plus cart-btn"></i>
+    </div>
+
+    <div class="card-container">
+      <h2 class="card-price"><span class="currency">$</span>470</h2>
+      <h1 class="card-title">Samsung A2</h1>
+      <p class="details-btn">click to view</p>
+      <div class="card-image-container">
+         <img src="https://i.warosu.org/data/lit/img/0115/80/1533609351327.png" alt=""/>
       </div>
-    </li>
-    <li class="product_item">
-      
-      <div class="product_image">
-        <a href="#"><img src="images/logo.png" alt=""></a>
+      <i class="fas fa-cart-plus cart-btn"></i>
+    </div>
+    
+    <div class="card-container">
+      <h2 class="card-price"><span class="currency">$</span>520</h2>
+      <h1 class="card-title">iPhone 5s</h1>
+      <p class="details-btn">click to view</p>
+      <div class="card-image-container">
+         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/IPhone_5.png/1200px-IPhone_5.png" alt=""/>
       </div>
-      <div class="product_values">
-        <div class="product_title">
-          <h5>White Fancy Dress</h5>
-        </div>
-        <div class="product_price">
-          <a href="#"><span class="price_old">$79.99</span> <span class="price_new">$69.99</span></a>
-           
-        </div>
-        <div class="product_desc">
-          <p class="truncate">Sed sodales odio non metus tincidunt consectetur. Integer non lobortis orci. In hac habitasse platea dictumst. Suspendisse sit amet condimentum arcu. Curabitur venenatis interdum lectus, vitae egestas sem facilisis sit amet. Praesent tortor purus, vulputate at ultricies quis, aliquet sed ante.</p>
-        </div>
+      <i class="fas fa-cart-plus cart-btn"></i>
+    </div>
+    
+    <div class="card-container">
+      <h2 class="card-price"><span class="currency">$</span>680</h2>
+      <h1 class="card-title">Samsung S8+</h1>
+      <p class="details-btn">click to view</p>
+      <div class="card-image-container">
+         <img src="https://avatars.mds.yandex.net/get-pdb/805781/76eb6370-4ebd-4bfb-9694-b210d0a9b190/orig" alt=""/>
       </div>
-    </li>
-    <li class="product_item">
-      <div class="product_image">
-        <a href="#"><img src="images/logo.png" alt=""></a>
-      </div>
-      <div class="product_values">
-        <div class="product_title">
-          <h5>White Fancy Dress</h5>
-        </div>
-        <div class="product_price">
-          <a href="#"><span class="price_old">$79.99</span> <span class="price_new">$69.99</span></a>
-           
-        </div>
-        <div class="product_desc">
-          <p class="truncate">Sed sodales odio non metus tincidunt consectetur. Integer non lobortis orci. In hac habitasse platea dictumst. Suspendisse sit amet condimentum arcu. Curabitur venenatis interdum lectus, vitae egestas sem facilisis sit amet. Praesent tortor purus, vulputate at ultricies quis, aliquet sed ante.</p>
-        </div>
-      </div>
-    </li>   
-   <li class="product_item">
-      
-      <div class="product_image">
-        <a href="#"><img src="images/logo.png" alt=""></a>
-      </div>
-      <div class="product_values">
-        <div class="product_title">
-          <h5>White Fancy Dress</h5>
-        </div>
-        <div class="product_price">
-          <a href="#"><span class="price_old">$79.99</span> <span class="price_new">$69.99</span></a>
-           
-        </div>
-        <div class="product_desc">
-          <p class="truncate">Sed sodales odio non metus tincidunt consectetur. Integer non lobortis orci. In hac habitasse platea dictumst. Suspendisse sit amet condimentum arcu. Curabitur venenatis interdum lectus, vitae egestas sem facilisis sit amet. Praesent tortor purus, vulputate at ultricies quis, aliquet sed ante.</p>
-        </div>
-      </div>
-    </li>    
-    <li class="product_item">
-      <div class="product_image">
-        <a href="#"><img src="images/logo.png" alt=""></a>
-      </div>
-      <div class="product_values">
-        <div class="product_title">
-          <h5>White Fancy Dress</h5>
-        </div>
-        <div class="product_price">
-          <a href="#"><span class="price_old">$79.99</span> <span class="price_new">$69.99</span></a>
-           
-        </div>
-        <div class="product_desc">
-          <p class="truncate">Sed sodales odio non metus tincidunt consectetur. Integer non lobortis orci. In hac habitasse platea dictumst. Suspendisse sit amet condimentum arcu. Curabitur venenatis interdum lectus, vitae egestas sem facilisis sit amet. Praesent tortor purus, vulputate at ultricies quis, aliquet sed ante.</p>
-        </div>
-      </div>
-    </li>    
-  </ul>
+      <i class="fas fa-cart-plus cart-btn"></i>
+    </div>
+
+  </div>
 </div>
 <style>
-    * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-img {
-  max-width: 100%;
-  height: auto;
-}
-ul.product_list {
-  display: block;
-  float: left;
-  list-style-type: none;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,700|Roboto:700');
+
+* {
   margin: 0;
   padding: 0;
-  width: 100%;
-}
-.product_grid a {
-  text-decoration: none;
-}
-.product_item {
-  display: inline-block;
-  background: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  position: relative;
+  box-sizing: border-box;
 }
 
-.product_image {
-  position: relative;
-  overflow: hidden;
-}
-.product_image a {
-  display: block;
-}
-.product_image img {
-  display: block;
+html {
+  background: #C3DAC3;
 }
 
-.product_title {
-  float: left;
-  width: 100%;
+.container {
+  max-width: 1000px;
+  margin: 100px auto;
+  padding: 0 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px 40px;
+}
+
+.project-title {
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-weight: 100;
+  margin-top: 100px;
+  font-size: 40px;
+  opacity: .3;
   text-transform: uppercase;
 }
 
-.product_price a {
-  color: #000;
-}
-.price_old {
-  color: #ea2e49;
-  text-decoration: line-through;
-}
-
-/*==========  Mobile First Method  ==========*/
-
-/* Custom, iPhone Retina */ 
-@media only screen and (min-width : 320px) {
-  ul.product_list {
-    margin: 0;
-  }
-  .product_item {
-    width: 100%;
-    margin: 0;
-    overflow: hidden;
-  }
-  .product_image {
-    height: 150px;
-    float: left;
-    width: 100px;
-  }
-  .product_title h5 {
-    margin: auto;
-    font-size: 1em;
-    font-weight: 500;
-    line-height: 1;
-  }
-  .product_price span {
-    font-size: 1.1em;
-    line-height: 1;
-  }
-  .product_desc {
-    overflow: hidden;
-    float: left;
-    line-height: 1;
-  }
-  .product_desc p {
-    margin: 0;
-    line-height: 1.3;
-    padding: 10px 0;
-}
-  .product_values .product_buttons {
-    position: relative;
-    text-align: left;
-    float: left;
-    margin-top: 7px;
-  }
-  .product_values .product_buttons button {
-    color: #252525;
-    background: rgba(255, 255, 255, 1);
-    font-size: 1em;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #000;
-  }
+.card-container {
+  height: 400px;
+  width: 300px;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  background: #fafafa;
+  cursor: pointer;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+  transition: ease-in-out .3s;
 }
 
-/* Extra Small Devices, Phones */ 
-@media only screen and (min-width : 480px) {
-  ul.product_list {
-    margin: 1%;
-  }
-  .product_item {
-    width: 49%;
-    margin: 0;
-  }
-  .product_image {
-    height: 300px;
-    float: left;
-    width: 100%;
-    text-align: center;
-  }
-  .product_image img {
-    max-height: 100%;
-    display: inline-block;
-  }
-  .product_title h5 {
-    font-size: 1.1em;
-    font-weight: 500;
-    line-height: 1;
-    padding: 10px 0 0;
-    text-align: center;
-}
-  .product_image .product_buttons {
-    display: block;
-  }
-  .product_price {
-    float: left;
-    text-align: center;
-    width: 100%;
-  }
-  .product_desc {
-    text-align: center;
-  }
-  .product_values .product_buttons {
-    display: none;
-  }
+.card-title {
+  position: absolute;
+  bottom: 65px;
+  width: 100%;
+  text-align: center;
+  color: #2f3640;
+  opacity: .9;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: normal;
 }
 
-@media only screen and (min-width: 678px) {
-  .product_item {
-    width: 32.5%;
+.details-btn {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  bottom: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom; 5px;
+  color: #2f3640;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  transition: ease-in-out .3s;
+  animation: slide-out-right 1.4s;
+}
+
+.details-btn:after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  top: 7px;
+  right: 50px;
+  height: 2px;
+  opacity: .7;
+  border-bottom: 1px solid #2f3640;
+}
+
+.details-btn:before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  top: 7px;
+  left: 50px;
+  height: 2px;
+  opacity: .7;
+  border-bottom: 1px solid #2f3640;
+}
+
+.card-price {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #4F4F4F;
+}
+
+.card-price > .currency {
+  position:absolute;
+  font-size: 16px;
+  top: 6px;
+  left: -12px;
+}
+
+.card-container:hover {
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.45);
+}
+
+.card-container:hover .details-btn {
+  opacity: .7;
+  animation: slide-in-left .6s;
+}
+
+.card-image-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 90%;
+  margin: 0 auto;
+}
+
+.card-image-container > img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(0.5);
+  transition: ease-in-out .6s;
+  opacity: .9;
+}
+
+.card-container:hover img {
+  transform: scale(0.55);
+  opacity: 1;
+}
+
+.cart-btn {
+  opacity: 0;
+  position: absolute;
+  top: 16px;
+  padding: 10px;
+  left: 20px;
+  font-size: 22px;
+  color: #BDBDBD;
+  transition: ease-in-out .3s;
+  animation: slide-out-left .62s;
+}
+
+.card-container:hover .cart-btn {
+  opacity: 1;
+  animation: slide-in-left .62s;
+}
+
+.cart-btn:hover {
+  cursor: pointer;
+  color: #27AE60;
+}
+
+@media(max-width: 1200px) {
+  .container {
+    max-width: 760px;
+  }
+  
+  .project-title {
+    font-size: 30px;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-  .product_item {
-    width: 24.25%;
+@media(max-width: 780px) {
+  .container {
+    max-width: 380px;
   }
-}
 
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
-  .product_item {
-    width: 19.5%;
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
-
-/* Extra Small Devices, Phones */ 
-@media only screen and (max-width : 480px) {
-  .product_title h5 {
-    font-weight: bold;
+@keyframes slide-in-left {
+  0% {
+    transform: translate3d(-300px, 0, 0);
   }
- .product_values {
-    float: left;
-    width: calc(100% - 100px);
-    padding: 0 10px;
+  20% {
+    transform: translate3d(-300px, 0, 0);
   }
-  .product_image {
-    height: 150px;
-    float: left;
-    width: 100px;
+  100% {
+    transform: translate3d(0, 0, 0);
   }
-  .product_image .product_buttons {
-    display: none;
-  }
-  .product_desc {
-    overflow: hidden;
-    float: left;
-    line-height: 1;
-  }
-  .product_values .product_buttons {
-    position: relative;
-    text-align: left;
-    float: left;
-    margin-top: 7px;
-  }
-  .product_values .product_buttons button {
-    color: #252525;
-    background: rgba(255, 255, 255, 1);
-    font-size: 1em;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #000;
-  }  
 }
 
-/* Custom, iPhone Retina */ 
-@media only screen and (max-width : 320px) {
-  .product_image {
-    height: auto;
-    width: 100%;
+@keyframes slide-out-left {
+  0% {
+    transform: translate3d(0, 0, 0);
   }
-  .product_image .product_buttons {
-    display: block;
+  100% {
+    transform: translate3d(-300px, 0, 0);
   }
-  .product_values {
-    width: 100%;
-    padding: 0;
-    margin: 5px 0;
+}
+
+@keyframes slide-out-right {
+  0% {
+    transform: translate3d(0, 0, 0);
   }
-  .product_title h5 {
-    margin: auto;
-    font-size: 1em;
-    line-height: 1;
-    font-weight: bold;
-  }
-  .product_desc {
-    display: none;
-  }
-  .product_values .product_buttons {
-    display: none;
+  100% {
+    transform: translate3d(300px, 0, 0);
   }
 }
     </style>
--->

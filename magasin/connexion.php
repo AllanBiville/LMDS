@@ -25,7 +25,7 @@ integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b
     <h1 class="h3 mb-3 fw-normal">Interface Magasin<br/>Connectez-vous !</h1>
 
     <div class="form-floating">
-      <input type="username" name="username" class="form-control" id="floatingInput" placeholder=" ">
+      <input autofocus="autofocus" type="username" name="username" class="form-control" id="floatingInput" placeholder=" ">
       <label for="floatingInput">Nom d'utilisateur</label>
     </div>
     <div class="form-floating">

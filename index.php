@@ -1,9 +1,11 @@
 <?php
 include("php/header.php");
+session_start();
 ?>
 <div class="conteneur_sous_header">
         <img class="sous_header"></img>
         <div class="sous_header_texte">
+        <img id="sous_header-logo_magasin" src="images/logo.png"/>
             <h1>Réparations téléphones, tablettes<br/> et vente d'accessoires</h1>
             <a href="devis.php">Demander un devis</a>
         </div>
